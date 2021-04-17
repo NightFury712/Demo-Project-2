@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.issue-content {
+  background-color: white;
+  margin-top: 20px;
+  padding: 10px;
+  padding-top: 20px;
+  width: 1000px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+input:focus, textarea:focus, select:focus {
+  background-color: blanchedalmond;
+  border-color: #34886f;
+  box-shadow: 0 0 5px #34886f;
+  transition: 0.2s;
+}
+
+#textarea {
+  width: 970px;
+  height: 200px;
+  
+}
+
+.subject {
+  margin-top: 10px;
+  height: 20px;
+  width: 1000px;
+}
+
+.table {
+  display: flex;
+}
+
+.table-left, .table-right {
+  display: flex;
+  flex-direction: row;
+  border-spacing: 10px;
+}
+
+td {
+  padding: 5px;
+  border-top: 1px solid #e5e5e5;
+}
+
+.submit {
+  float: right;
+}
+button {
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 5px 10px;
+  margin: 5px;
+}
+
+.add {
+  background-color: #4cbd9b;
+  color: white;
+}
+
+.add:hover {
+  background-color: #35ac88;
+}
+
+.preview {
+  background-color: white;
+}
+
+.preview:hover {
+  background-color: whitesmoke;
+}
