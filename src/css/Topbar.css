@@ -1,0 +1,35 @@
+.header {
+  background-color: #edf4f0;
+  border-bottom: 1px solid #BBB;
+}
+
+.top-nav {
+  position: fixed; 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  padding-left: 11px;
+  margin-top: 3px;
+
+  font-size: 18px;
+  color: black;
+
+  z-index: 99; 
+}
+
+.logo {
+  color: #BBB;
+  margin-right: 5px;
+}
+
+.top-nav-content {
+  display: flex;
+  list-style: none;
+}
+
+.top-nav-item {
+  padding: 8px 5px;
+}
+

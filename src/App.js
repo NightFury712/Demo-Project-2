@@ -1,18 +1,33 @@
 // import { useState,useEffect } from 'react'
 import './css/App.css'
 import './css/Navbar.css'
-import './css/Form.css'
-// import Form from './components/Form';
-import Navbar from './components/Navbar'
-
-
+// import Navbar from './components/Navbar'
+// import Topbar from './components/Topbar'
+import Dashboard from './Views/Dashboard'
+import Project from './Views/Project'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  NavLink
+} from "react-router-dom";
 
 import React from "react";
 
 
 export default function App() {
   return (
-    <Navbar />
+    <Router>
+      {/* <React.Fragment>
+        <Topbar />
+        <Navbar />
+      </React.Fragment> */}
+
+      <Route path="/" exact component={Dashboard}/>
+      <Route path="/project" component={Project}/>
+    </Router>
+
+
   );
 }
 

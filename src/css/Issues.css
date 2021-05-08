@@ -1,0 +1,17 @@
+table {
+  border-spacing: 0;
+}
+
+th, td {
+  padding: 5px;
+}
+
+.header {
+  height: 50px;
+
+  background-color: white;
+  color: #4cbd9b;
+
+  text-align: center;
+}
+

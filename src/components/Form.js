@@ -1,6 +1,29 @@
 import React from 'react'
+import '../css/Form.css'
 
-const Form = () => {
+
+const Form = ({issue, setIssue}) => {
+  const changeIssue = () => {
+    var date = new Date();
+    // console.log(document.querySelector('.subject').value);
+    setIssue(
+      [...issue, {
+        type: document.querySelector('.issue-type').value,
+        id: Math.random() * 1000,
+        subject: document.querySelector('.subject').value,
+        description: document.querySelector('#textarea').value,
+        status: "Open",
+        priority: document.querySelector('.priority').value,
+        category: document.querySelector('.category').value,
+        dueDate: document.querySelector('#date-time').value,
+        created: date.toUTCString(),
+        assignee: document.querySelector('.assignee').value,
+        milestone: document.querySelector('.milestone').value,
+        version: document.querySelector('.version').value
+      }]
+    );
+  }
+
   return (
     <div>
       <form>
@@ -28,7 +51,7 @@ const Form = () => {
               <tr>
                 <td>Priority</td>
                 <td>
-                  <select>
+                  <select className="priority">
                     <option value="high">High</option>
                     <option value="normal">Normal</option>
                     <option value="low">Low</option>
@@ -54,7 +77,7 @@ const Form = () => {
               <tr>
                 <td>Assignee</td>
                 <td>
-                  <select>
+                  <select className="assignee">
                     <option value="me">Me</option>
                     <option value="you">You</option>
                     <option value="we">We</option>
@@ -64,7 +87,7 @@ const Form = () => {
               <tr>
                 <td>Milestone</td>
                 <td>
-                  <select>
+                  <select className="milestone">
                     <option value="me">Me</option>
                     <option value="you">You</option>
                     <option value="we">We</option>
@@ -74,7 +97,7 @@ const Form = () => {
               <tr>
                 <td>Version</td>
                 <td>
-                  <select>
+                  <select className="version">
                     <option value="me">Me</option>
                     <option value="you">You</option>
                     <option value="we">We</option>
@@ -87,7 +110,7 @@ const Form = () => {
       </div>
       <div className="submit">
         <button className="preview">Preview</button>
-        <button className="add">Add</button>
+        <button className="add" onClick={changeIssue}>Add</button>
       </div>
     </div>
 

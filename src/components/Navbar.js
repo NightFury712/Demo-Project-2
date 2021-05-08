@@ -4,10 +4,15 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  NavLink
 } from "react-router-dom";
+import Issues from '../Views/Issues';
+import leftNavLink from '../items/LeftNavLink'
+import { useState } from 'react'
 
-const Narbar = () => {
+const Navbar = () => {
+  const [issue, setIssue] = useState([]);
+
   return (
     <Router>
       <div className="main-content">
@@ -15,59 +20,18 @@ const Narbar = () => {
           <div className="logo">
             <label>Bug tracking</label>
           </div>
-          <span className="top nav-link">
-            <Link className="link" to="/">
-              <span className="link-content">
-                <i className="fas fa-home"></i>
-                <span className="link-span"> Home</span>
+          {leftNavLink.map((item) => {
+            return (
+              <span className="nav-link" key={item.href}>
+                <NavLink activeClassName="actived" className="link" to={item.href}>
+                  <span className="link-content">
+                    {item.icon}
+                    <span className="link-span"> {item.content}</span>
+                  </span>
+                </NavLink>
               </span>
-            </Link>
-          </span>
-          <span className="nav-link">
-            <Link className="link" to="/Add-issue">
-              <span className="link-content">
-                <i className="fas fa-plus"></i>
-                <span className="link-span">  Add Issues</span>
-              </span>
-            </Link>
-          </span>
-          <span className="nav-link">
-            <Link className="link" to="/users">
-              <span className="link-content">
-                <i className="far fa-list-alt"></i>
-                <span className="link-span">  Issues</span>
-              </span>
-            </Link>
-          </span>
-          <span className="nav-link">
-            <Link className="link" to="/users">
-              <span className="link-content">
-                <span>  Board</span>
-              </span>
-            </Link>
-          </span>
-          <span className="nav-link">
-            <Link className="link" to="/users">
-              <span className="link-content">
-                <i className="fas fa-chart-bar"></i>
-                <span>  Gantt Chart</span>
-              </span>
-            </Link>
-          </span>
-          <span className="nav-link">
-            <Link className="link" to="/users">
-              <span className="link-content">
-                <span>  Wiki</span>
-              </span>
-            </Link>
-          </span>
-          <span className="nav-link">
-            <Link className="link" to="/users">
-              <span className="link-content">
-                <span> Project Settings</span>
-              </span>
-            </Link>
-          </span>
+            )
+          })}
         </nav>
 
 
@@ -75,14 +39,17 @@ const Narbar = () => {
             renders the first one that matches the current URL. */}
         <div className="nav-content">
           <Switch>
-            <Route path="/">
-              <Home />
+            <Route path="/add-issue">
+              <Form issue={issue} setIssue={setIssue} />
             </Route>
-            <Route path="/Add-issue">
-              <Form />
+            <Route path="/issues">
+              <Issues issue={issue} />
             </Route>
             <Route path="/users">
               <Users />
+            </Route>
+            <Route path="/project/home">
+              <Home />
             </Route>
           </Switch>
         </div>
@@ -96,13 +63,9 @@ function Home() {
   return <h2>Hello</h2>
 }
 
-// function About() {
-//   return <h2>HIIII</h2>
-// }
-
 function Users() {
   return <h2>Users</h2>;
 }
 
 
-export default Narbar;
+export default Navbar;
