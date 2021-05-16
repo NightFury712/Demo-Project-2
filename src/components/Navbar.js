@@ -9,6 +9,8 @@ import {
 import Issues from '../Views/Issues';
 import leftNavLink from '../items/LeftNavLink'
 import { useState } from 'react'
+import Board from './Board'
+import ProjectSettings from './ProjectSettings'
 
 const Navbar = () => {
   const [issue, setIssue] = useState([]);
@@ -45,15 +47,17 @@ const Navbar = () => {
             <Route path="/issues">
               <Issues issue={issue} />
             </Route>
-            <Route path="/users">
-              <Users />
-            </Route>
             <Route path="/project/home">
               <Home />
             </Route>
+            <Route path="/board">
+              <Board />
+            </Route>
+            <Route path="/projectSettings">
+              <ProjectSettings />
+            </Route>
           </Switch>
         </div>
-
       </div>
     </Router>
   );
@@ -63,9 +67,6 @@ function Home() {
   return <h2>Hello</h2>
 }
 
-function Users() {
-  return <h2>Users</h2>;
-}
 
 
 export default Navbar;

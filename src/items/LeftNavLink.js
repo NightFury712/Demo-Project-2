@@ -18,6 +18,11 @@ const leftNavLink = [
     icon: <i className="fas fa-chart-bar"></i>,
     content: "Board",
     href: "/board",
+  },
+  {
+    icon: <i class="fas fa-cog"></i>,
+    content: "Project Settings",
+    href: "/projectSettings",
   }
 ]
 

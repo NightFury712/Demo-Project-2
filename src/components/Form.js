@@ -25,7 +25,7 @@ const Form = ({issue, setIssue}) => {
   }
 
   return (
-    <div>
+    <React.Fragment>
       <form>
         <select name="issue-type" className="issue-type">
           <option value="task">Task</option>
@@ -112,7 +112,7 @@ const Form = ({issue, setIssue}) => {
         <button className="preview">Preview</button>
         <button className="add" onClick={changeIssue}>Add</button>
       </div>
-    </div>
+    </React.Fragment>
 
   );
 }

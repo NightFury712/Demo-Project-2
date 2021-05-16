@@ -10,18 +10,22 @@ const Topbar = () => {
           <div className="logo">
             <i className="fas fa-city"></i>
           </div>
-          <ul className="top-nav-content">
+          <ul className="top-nav-menu">
             <li className="top-nav-item">
               {/* <Link> */}
-              <span>Dashboard</span>
+              <Link href="#">Dashboard</Link>
               {/* </Link> */}
             </li>
             <li className="top-nav-item">
-              <Link to="/project/home">
-                <span>Project</span>
-              </Link>
+              <Link href="#">Projects</Link>
+              <div className="dropdown-box project">
+
+              </div>
             </li>
-            <li className="top-nav-item">Recently Viewed</li>
+            <li className="top-nav-item">
+              <Link href="#">Recently Viewed</Link>
+              <div className="dropdown-box recent"></div>
+            </li>
           </ul>
         </nav>
       </div>
