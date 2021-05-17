@@ -1,0 +1,35 @@
+.full-board {
+    display: flex;
+    flex-direction: column;
+}
+
+.wrap-header {
+    background-color: white;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 32px;
+    padding-right: 32px;
+    height: 49px
+}
+
+.header-board {
+    display: flex;
+    flex-direction: row;
+}
+
+.board-set-text {
+    color: rgba(39, 18, 66, 0.815);
+    font-size: 20px;
+    margin-left: 5px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.board-set-icon {
+    margin-top: 12px;
+    text-align: center;
+}
+
+.content-main {
+    margin-top: 10px;
+}
