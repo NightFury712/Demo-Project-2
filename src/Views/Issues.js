@@ -7,7 +7,7 @@ const Issues = ({issue}) => {
     <div>
       <table>
         <thead>
-          <tr className="header">
+          <tr className="header-issue">
             <th>
               <span>Issue Type</span>
             </th>

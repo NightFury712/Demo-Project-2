@@ -1,0 +1,21 @@
+._plain-button-timeline {
+  display: inline-block;
+  border: none;
+  outline: none;
+  width: 150px;
+  height: 32px;
+  overflow: visible;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+._plain-button-timeline:hover .icon--arrow-up.-medium::before {
+  border-top: 2px solid #2c9a7a;
+  border-right: 2px solid#2c9a7a;
+}
+
+._plain-button-timeline:hover .icon--arrow-down.-medium::before {
+  border-top: 2px solid #2c9a7a;
+  border-right: 2px solid#2c9a7a;
+}

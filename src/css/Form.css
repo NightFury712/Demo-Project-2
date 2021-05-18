@@ -13,7 +13,8 @@
   text-align: center;
 }
 
-input:focus, textarea:focus, select:focus {
+textarea:focus, select:focus {
+  outline: none;
   background-color: blanchedalmond;
   border-color: #34886f;
   box-shadow: 0 0 5px #34886f;
@@ -50,14 +51,15 @@ td {
 .submit {
   float: right;
 }
-button {
+
+/* button {
   border: none;
   outline: none;
   border-radius: 3px;
   cursor: pointer;
   padding: 5px 10px;
   margin: 5px;
-}
+} */
 
 .add {
   background-color: #4cbd9b;
