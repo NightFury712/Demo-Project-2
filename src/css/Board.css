@@ -1,20 +1,21 @@
 .full-board {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .wrap-header {
     background-color: white;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-left: 32px;
-    padding-right: 32px;
-    height: 49px
+    height: 49px;
+    border:  0.5px solid rgb(187, 182, 182);
+    width: 100%;
+
 }
 
 .header-board {
     display: flex;
     flex-direction: row;
+    margin-left: 20px;
 }
 
 .board-set-text {
@@ -32,4 +33,45 @@
 
 .content-main {
     margin-top: 10px;
+    margin-left: 20px;
+}
+
+.detail-filter {
+    display: flex;
+    flex-direction: row;
+}
+
+.main-board {
+    display: flex;
+    flex-direction: row;
+}
+
+.box-filter{
+    width: 200px;
+    height: 50px;
+}
+
+.f-issue, .f-category, .f-milestone, .f-assignee {
+    margin-top: 5px;
+    
+}
+
+.issuetype-filter, .category-filter, .milestone-filter, .assignee-filter {
+    border: 2px solid rgb(187, 182, 182);
+    border-radius: 6px;
+    width: 100px;
+    height: 30px;
+}
+
+.button-hide-filter {
+    margin-left: 50px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    border: 2px solid gray;
+    border-radius: 12px;
+}
+
+.name-board {
+    margin-top: 5px;
 }
