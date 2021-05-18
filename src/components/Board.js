@@ -36,9 +36,9 @@ const Board = () => {
 					<div class="box-filter">
 						<div class="filter-issueType">
 							<div><span>Issue Type</span></div>
-							<div class="f-issue">
+							<div class="wrap-filter">
 								<form>
-									<select name="issuetype-filter" class="issuetype-filter">
+									<select name="issuetype-filter" class="filter">
 										<option value="All">All</option>
 										<option value="Task">Task</option>
 										<option value="Bug">Bug</option>
@@ -53,9 +53,9 @@ const Board = () => {
 					<div class="box-filter">
 						<div class="filter-category">
 							<div><span>Category</span></div>
-							<div class="f-category">
+							<div class="wrap-filter">
 								<form>
-									<select name="category-filter" class="category-filter">
+									<select name="category-filter" class="filter">
 										<option value="All">All</option>
 										<option value="NoCategoty">No Category</option>
 										<option value="Research">Research</option>
@@ -68,9 +68,9 @@ const Board = () => {
 					<div class="box-filter">
 						<div class="filter-milestone">
 							<div><span>Milestone</span></div>
-							<div class="f-milestone">
+							<div class="wrap-filter">
 								<form>
-									<select name="milestone-filter" class="milestone-filter">
+									<select name="milestone-filter" class="filter">
 										<option value="All">All</option>
 										<option value="NoMilestone">No Milestone</option>
 									</select>
@@ -82,9 +82,9 @@ const Board = () => {
 					<div class="box-fiter">
 						<div class="assignee-issueType">
 							<div><span>Assignee</span></div>
-							<div class="f-assignee">
+							<div class="wrap-filter">
 								<form>
-									<select name="assignee-filter" class="assignee-filter">
+									<select name="assignee-filter" class="filter">
 										<option value="All">All</option>
 										<option value="Unassignee">Unassignee</option>
 									</select>
@@ -95,7 +95,74 @@ const Board = () => {
 				</div>
 			</div>
 			<div class="board-management">
-
+				<div class="board">
+					<div class="status">
+						<span class="dot-red"></span>
+						<div class="name"><span>Open</span></div>
+						<div class="number-open">1</div>
+					</div>
+					<ul class="list">
+						<li class="brief-issue">
+							<div class="card-issue">
+								<a class="name-issue" href="/issues" target="_blank">Make-Frontend</a>
+								<span class="typeOfIssue">Task</span>
+							</div>
+							<div><span class="project-name">Create-Website</span></div>
+							<div><span class="due-date">30/05/2021</span></div>
+						</li>
+					</ul>
+				</div>
+				<div class="board">
+					<div class="status">
+						<span class="dot-blue"></span>
+						<div class="name"><span>In Progress</span></div>
+						<div class="number-inprogress">1</div>
+					</div>
+					<ul class="list">
+						<li class="brief-issue">
+							<div class="card-issue">
+								<a class="name-issue" href="/issues" target="_blank">Make-Frontend</a>
+								<span class="typeOfIssue">Task</span>
+							</div>
+							<div><span class="project-name">Create-Website</span></div>
+							<div><span class="due-date">30/05/2021</span></div>
+						</li>
+					</ul>
+				</div>
+				<div class="board">
+					<div class="status">
+						<span class="dot-green"></span>
+						<div class="name"><span>Resolved</span></div>
+						<div class="number-resolved">1</div>
+					</div>
+					<ul class="list">
+						<li class="brief-issue">
+							<div class="card-issue">
+								<a class="name-issue" href="/issues" target="_blank">Make-Frontend</a>
+								<span class="typeOfIssue">Task</span>
+							</div>
+							<div><span class="project-name">Create-Website</span></div>
+							<div><span class="due-date">30/05/2021</span></div>
+						</li>
+					</ul>
+				</div>
+				<div class="board">
+					<div class="status">
+						<span class="dot-greenyellow"></span>
+						<div class="name"><span>Closed</span></div>
+						<div class="number-closed">1</div>
+					</div>
+					<ul class="list">
+						<li class="brief-issue">
+							<div class="card-issue">
+								<a class="name-issue" href="/issues" target="_blank">Make-Frontend</a>
+								<span class="typeOfIssue">Task</span>
+							</div>
+							<div><span class="project-name">Create-Website</span></div>
+							<div><span class="due-date">30/05/2021</span></div>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</div>
     </React.Fragment>
