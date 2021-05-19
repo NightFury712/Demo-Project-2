@@ -6,9 +6,15 @@
   padding-right: 32px;
 }
 
-.content-header {
+#container {
   margin-top: 50px;
+  display: block;
+  position: absolute;
+}
 
+.content-header {
+  margin-top: 40px;
+  position: relative;
   display: flex;
   flex-direction: row;
   
@@ -45,7 +51,7 @@
   font-weight: 500;
 }
 
-#binding-main {
+#binding-main-dashboard {
   display: block;
 }
 

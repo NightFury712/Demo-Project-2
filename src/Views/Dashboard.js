@@ -30,7 +30,7 @@ const Dashboard = () => {
               </span>
           </div>
         </header>
-        <div id="binding-main">
+        <div id="binding-main-dashboard">
           <div className="dashboard-contents">
             <ProjectList arrow={arrow} changeArrow={changeArrow}/>
             <TimeLineList arrowTL={arrowTL} changeArrowTL={changeArrowTL}/>

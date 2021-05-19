@@ -1,14 +1,15 @@
 import React from 'react'
 
 import '../css/TimeLineList.css'
+import StreamUpdateItem from '../items/StreamUpdateItem'
 
-const TimeLineList = ({arrowTL, changeArrowTL}) => {
+const TimeLineList = ({ arrowTL, changeArrowTL }) => {
   return (
     <React.Fragment>
       <div className="dashboard-contents-right">
         <section id="timeline-section" className="timeline-section">
           <div className="timeline__wrapper">
-            <div class="title-group -dashboard">
+            <div class="title-group-dashboard">
               <h3 class="title title--thirdly title-group__inline-title -clickable js_folding-handle">
                 <button type="button" class="_plain-button-timeline" onClick={changeArrowTL}>
                   <span class="title-group__icon-collapsed">
@@ -17,10 +18,16 @@ const TimeLineList = ({arrowTL, changeArrowTL}) => {
                   <span className="_plain-button-content">
                     Recent Update
                   </span>
-              </button>
+                </button>
               </h3>
             </div>
-            <div id="timeline-content"></div>
+            <div id="timeline-content">
+              <div className="timeline">
+                <ul className="timeline__stream">
+                  <StreamUpdateItem />
+                </ul>
+              </div>
+            </div>
           </div>
         </section>
       </div>

@@ -1,13 +1,6 @@
-
 .dashboard-contents-left {
   min-width: 700px;
   padding-right: 18px;
-  height: 500px;
-}
-
-.dashboard-contents-right {
-  min-width: 600px;
-  padding-left: 18px;
   height: 500px;
 }
 

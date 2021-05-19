@@ -5,6 +5,7 @@
 }
 
 .wrap-header {
+    
     background-color: white;
     height: 49px;
     border:  0.5px solid rgb(187, 182, 182);
@@ -192,4 +193,14 @@
     font-size: 12px;
     color:red;
     font-weight: 600;
+}
+
+.header-board .board-set-content {
+    display: flex;
+    flex-direction: row;
+}
+
+.header-board .board-set-content .board-project-key {
+    margin-top: 12px;
+    padding-left: 5px;
 }

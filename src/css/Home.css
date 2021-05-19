@@ -1,0 +1,30 @@
+.home-content-wrapper {
+  padding-left: 32px;
+  padding-right: 32px;
+  display: flex;
+}
+
+.home-content-main {
+  margin-top: 30px;
+  display: block;
+}
+
+.home-content-main .title-group-content-main {
+  width: 720px;
+  height: 100%;
+}
+
+.title--thirdly-content-main {
+  font-size: 1.2rem;
+}
+
+.title-group-content-main .title__sub-line {
+  font-size: 1rem;
+  padding-left: 5px;
+  font-weight: 500;
+}
+
+.title-group-content-main .title__sub-icon {
+  padding-left: 5px;
+  color: #cccccc;
+}

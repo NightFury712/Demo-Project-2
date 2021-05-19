@@ -11,6 +11,7 @@ import leftNavLink from '../items/LeftNavLink'
 import { useState } from 'react'
 import Board from './Board'
 import ProjectSettings from './ProjectSettings'
+import Home from '../Views/Home'
 
 const Navbar = () => {
   const [issue, setIssue] = useState([]);
@@ -62,11 +63,5 @@ const Navbar = () => {
     </Router>
   );
 }
-
-function Home() {
-  return <h2>Hello</h2>
-}
-
-
 
 export default Navbar;

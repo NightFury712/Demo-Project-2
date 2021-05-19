@@ -1,12 +1,16 @@
 .header {
-  height: 50px;
+  position: fixed; 
   background-color: #edf4f0;
+  width: 100%;
+  height: 50px;
   border-bottom: 1px solid #BBB;
   text-align: center;
+  z-index: 900;
 }
 
 .top-nav {
-  position: fixed; 
+  position: absolute; 
+  
   display: flex;
   flex-direction: row;
   justify-content: space-around;
