@@ -90,21 +90,13 @@ const Form = ({issue, setIssue}) => {
               <tr>
                 <td id="label_1">Milestone</td>
                 <td>
-                  <select className="milestone">
-                    <option value="me">Me</option>
-                    <option value="you">You</option>
-                    <option value="we">We</option>
-                  </select>
+                 <input type="text" name="milestone" className="milestone"></input>
                 </td>
               </tr>
               <tr>
                 <td id="label_1">Version</td>
                 <td>
-                  <select className="version">
-                    <option value="me">Me</option>
-                    <option value="you">You</option>
-                    <option value="we">We</option>
-                  </select>
+                  <input type="text" name="version" className="version"></input>
                 </td>
               </tr>
             </tbody>
