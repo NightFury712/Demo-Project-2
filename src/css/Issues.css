@@ -15,3 +15,54 @@ th, td {
   text-align: center;
 }
 
+.search-condition-button {
+  border:   none;
+  font-size: 15px;
+  font-weight: 700;
+  margin-left: 20px;
+  margin-top: 50px;
+}
+
+.bar-status {
+  display: flex;
+  flex-direction: row;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.statusString {
+  font-weight: 600;
+}
+
+.filter-nav__item {
+  margin-left: 30px;
+}
+
+.filter-nav__link {
+  border: none;
+  font-size: 15px;
+}
+
+.box-filter1 {
+  width: 200px;
+  height: 50px;
+  margin-right: 20px;
+}
+
+.wrap-filter1 {
+  margin-top: 5px;
+}
+
+.filter1 {
+  border: 2px solid rgb(187, 182, 182);
+  border-radius: 6px;
+  width: 180px;
+  height: 30px;
+}
+
+.bar-filter {
+  margin-left: 20px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+}

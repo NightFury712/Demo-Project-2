@@ -22,7 +22,7 @@ const Board = () => {
 							<h3 className="name-board">Board</h3>
 						</div>
 						<div className="choose-filter">
-							<button className="button-hide-filter">
+							<button className="button-hide-filter1">
 								<div>
 									<i className="fas fa-filter"></i>
 								</div>
