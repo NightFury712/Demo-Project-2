@@ -66,3 +66,40 @@ th, td {
   display: flex;
   flex-direction: row;
 }
+
+.issue-table {
+  margin-top: 130px;
+  margin-left: 20px;
+  border: solid rgb(204, 203, 203);
+  border-radius: 10px;
+}
+
+
+.sort {
+  background-color: white;
+  margin-right: 30px;
+  height: 50px;
+  font-size: 13px;
+  color: #069b6e;
+  font-weight: 600;
+}
+
+#issueType, #issueStatus, #issuePriority, #issueCreated, #issueDuedate, #issueUpdate {
+  width: 90px;
+}
+
+#issueKey {
+  width: 60px;
+}
+
+#issueSubject {
+  width: 210px;
+}
+
+#issueAssignee {
+  width: 160px;
+}
+
+#issueRegister {
+  width: 160px;
+}
