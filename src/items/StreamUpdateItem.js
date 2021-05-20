@@ -13,9 +13,9 @@ const StreamUpdateItem = () => {
               <div className="stream-update__title">
                 <span className="stream-update__text">
                   <span className="stream-update__username">Hoang Hai Danh </span>
-                              add a new
-                              <span className="Action-Addissue">issue</span>
-                </span>
+                    add a new
+                    <span className="Action-Addissue">issue</span>
+                  </span>
                 <span className="stream-update__meta">4 day agos</span>
               </div>
               <span className="backlog-card-checked">123456-1</span>

@@ -10,12 +10,12 @@
 }
 
 .home-content-main .title-group-content-main {
-  width: 720px;
-  height: 100%;
+  width: 700px;
 }
 
 .title--thirdly-content-main {
   font-size: 1.2rem;
+  margin-bottom: 20px;
 }
 
 .title-group-content-main .title__sub-line {
@@ -27,4 +27,86 @@
 .title-group-content-main .title__sub-icon {
   padding-left: 5px;
   color: #cccccc;
+}
+
+.home-content-sub {
+  padding-left: 36px;
+  height: 100%;
+  width: 500px;
+}
+
+.title--fourth-content-sub {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.card-default-content-sub {
+  padding: 18px;
+  background-color: #fff;
+  border: solid 1px #c2c2c2;
+  border-radius: 4px;
+}
+
+.graph-bar-full {
+  width: 100%;
+  height: 100px;
+}
+
+.graph-bar-full .graph-bar__fig {
+  font-size: 0;
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  height: 16px;
+  padding-top: 5px;
+}
+
+.graph-bar-full .graph-bar__fig .status--1 {
+  width: 100%;
+  height: 16px;
+  background-color: #ed8077;
+}
+
+.graph-bar-full .graph-bar__info {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: row;
+  height: 5px;
+  width: 100%;
+}
+
+.graph-bar__info .graph-bar__info-wrapper {
+  text-align: center;
+  
+  width: 25%;
+}
+
+.graph-bar__info-wrapper-title {
+  margin-bottom: 5px;
+}
+
+.graph-bar__info-wrapper-content {
+  font-size: 0.9rem;
+  color: #fff;
+  height: 20px;
+  width: 90%;
+  border-radius: 20px;
+  vertical-align: middle;
+  margin: auto;
+}
+
+.graph-bar__info-wrapper .info-content--1 {
+  background-color: #ed8077;
+}
+
+.graph-bar__info-wrapper .info-content--2 {
+  background-color: #4488c5;
+}
+
+.graph-bar__info-wrapper .info-content--3 {
+  background-color: #5eb5a6;
+}
+
+.graph-bar__info-wrapper .info-content--4  {
+  background-color: #a1af2f;
 }

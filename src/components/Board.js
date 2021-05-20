@@ -15,7 +15,6 @@ const Board = () => {
 						<h1 className="board-set-text">Project Name</h1>
 					</div>
 				</div>
-
 				<div className="content-main">
 					<div className="main-board">
 						<div className="hide-filter">

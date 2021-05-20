@@ -42,19 +42,19 @@ const Navbar = () => {
             renders the first one that matches the current URL. */}
         <div className="nav-content">
           <Switch>
-            <Route path="/add-issue">
+            <Route path="/project/add-issue">
               <Form issue={issue} setIssue={setIssue} />
             </Route>
-            <Route path="/issues">
+            <Route path="/project/issues">
               <Issues issue={issue} />
             </Route>
             <Route path="/project/home">
               <Home />
             </Route>
-            <Route path="/board">
+            <Route path="/project/board">
               <Board />
             </Route>
-            <Route path="/projectSettings">
+            <Route path="/project/projectSettings">
               <ProjectSettings />
             </Route>
           </Switch>
