@@ -72,6 +72,8 @@ th, td {
   margin-left: 20px;
   border: solid rgb(204, 203, 203);
   border-radius: 10px;
+  background-color: white;
+
 }
 
 
@@ -85,21 +87,56 @@ th, td {
 }
 
 #issueType, #issueStatus, #issuePriority, #issueCreated, #issueDuedate, #issueUpdate {
-  width: 90px;
+  width: 100px;
+  text-align: center;
 }
 
 #issueKey {
   width: 60px;
+  text-align: center;
 }
 
 #issueSubject {
   width: 210px;
+  text-align: center;
 }
 
 #issueAssignee {
   width: 160px;
+  text-align: center;
 }
 
 #issueRegister {
   width: 160px;
+  text-align: center;
+}
+
+.row-issueType, .row-issueStatus, .row-issuePriority, .row-issueCreated, .row-issueDueDate, .row-issueUpdate {
+  width: 100px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.row-issueKey {
+  width: 60px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.row-issueSubject {
+  width: 210px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.row-issueAssignee {
+  width: 160px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.row-issueRegister {
+  width: 160px;
+  text-align: center;
+  font-size: 12px;
 }

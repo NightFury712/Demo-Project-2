@@ -144,7 +144,42 @@ const Issues = ({issue}) => {
                                 </span>
                             </th>
                         </tr>
+                        
                     </thead>
+                    <tbody class="tbody">
+                        <tr>
+                            <td class="row-issueType">
+                                <span >Task</span>
+                            </td>
+                            <td class="row-issueKey">
+                                <span >123456-1</span>
+                            </td>
+                            <td class="row-issueSubject">
+                                <span >Make-Frontend</span>
+                            </td>
+                            <td class="row-issueAssignee">
+                                <span>Dang</span>
+                            </td>
+                            <td class="row-issueStatus">
+                                <span>Open</span>
+                            </td>
+                            <td class="row-issuePriority">
+                                <span>High</span>
+                            </td>
+                            <td class="row-issueCreated">
+                                <span>15-05-2021</span>
+                            </td>
+                            <td class="row-issueDueDate">
+                                <span>30-05-2021</span>
+                            </td>
+                            <td class="row-issueUpdate">
+                                <span>20-05-2021</span>
+                            </td>
+                            <td class="row-issueRegister">
+                                <span>Cuong</span>
+                            </td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
         </div>
