@@ -2,10 +2,18 @@ import React from "react";
 import Topbar from '../components/Topbar'
 import Navbar from '../components/Navbar'
 
-const Project = () => {
+const Project = ({changeFormAddPrj, stateRecent,statePrj, changestatePrj, changeStateRecent, changeFormAddIssue, openHomePage}) => {
   return (
       <React.Fragment>
-        <Topbar />
+        <Topbar 
+          changeFormAddPrj={changeFormAddPrj} 
+          stateRecent={stateRecent} 
+          statePrj={statePrj} 
+          changestatePrj={changestatePrj} 
+          changeStateRecent={changeStateRecent}
+          changeFormAddIssue={changeFormAddIssue}
+          openHomePage={openHomePage}
+        />
         <Navbar />
       </React.Fragment>
   );
