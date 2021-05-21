@@ -26,6 +26,9 @@ const Form = ({issue, setIssue}) => {
 
   return (
     <React.Fragment>
+      <h3 id="h3_1">
+	      Add Issue
+      </h3>
       <form>
         <select name="issue-type" className="issue-type">
           <option value="task">Task</option>
@@ -44,12 +47,12 @@ const Form = ({issue, setIssue}) => {
         <div className="table">
           <table className="table-left">
             <tbody>
+                <tr>
+                  <td id="label_1">Status</td>
+                  <td id="td_status">Open</td>
+                </tr>
               <tr>
-                <td>Status</td>
-                <td>Open</td>
-              </tr>
-              <tr>
-                <td>Priority</td>
+                <td id="label_1">Priority</td>
                 <td>
                   <select className="priority">
                     <option value="high">High</option>
@@ -59,13 +62,13 @@ const Form = ({issue, setIssue}) => {
                 </td>
               </tr>
               <tr>
-                <td>Category</td>
+                <td id="label_1">Category</td>
                 <td>
                   <input type="text" name="category" className="category"></input>
                 </td>
               </tr>
               <tr>
-                <td>Due date</td>
+                <td id="label_1">Due date</td>
                 <td>
                   <input type="datetime-local" id="date-time" name="date-time"></input>
                 </td>
@@ -75,7 +78,7 @@ const Form = ({issue, setIssue}) => {
           <table className="table-right">
             <tbody>
               <tr>
-                <td>Assignee</td>
+                <td id="label_1">Assignee</td>
                 <td>
                   <select className="assignee">
                     <option value="me">Me</option>
@@ -85,23 +88,15 @@ const Form = ({issue, setIssue}) => {
                 </td>
               </tr>
               <tr>
-                <td>Milestone</td>
+                <td id="label_1">Milestone</td>
                 <td>
-                  <select className="milestone">
-                    <option value="me">Me</option>
-                    <option value="you">You</option>
-                    <option value="we">We</option>
-                  </select>
+                 <input type="text" name="milestone" className="milestone"></input>
                 </td>
               </tr>
               <tr>
-                <td>Version</td>
+                <td id="label_1">Version</td>
                 <td>
-                  <select className="version">
-                    <option value="me">Me</option>
-                    <option value="you">You</option>
-                    <option value="we">We</option>
-                  </select>
+                  <input type="text" name="version" className="version"></input>
                 </td>
               </tr>
             </tbody>

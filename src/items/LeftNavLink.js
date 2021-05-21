@@ -7,22 +7,22 @@ const leftNavLink = [
   {
     icon: <i className="fas fa-plus"></i>,
     content: "Add Issues",
-    href: "/add-issue",
+    href: "/project/add-issue",
   },
   {
     icon: <i className="far fa-list-alt"></i>,
     content: "Issues",
-    href: "/issues",
+    href: "/project/issues",
   },
   {
     icon: <i className="fas fa-chart-bar"></i>,
     content: "Board",
-    href: "/board",
+    href: "/project/board",
   },
   {
     icon: <i class="fas fa-cog"></i>,
     content: "Project Settings",
-    href: "/projectSettings",
+    href: "/project/projectSettings",
   }
 ]
 

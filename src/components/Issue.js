@@ -1,38 +1,39 @@
 import React from 'react'
+import '../css/Issue.css'
 
 const Issue = ({issue}) => {
   return (
     <React.Fragment>
       <tr>
         <td>
-          <span>{issue.type}</span>
+          <span class="row-issueType">{issue.type}</span>
         </td>
         <td>
-          <span>123456-1</span>
+          <span class="row-issueKey">123456-1</span>
         </td>
         <td>
-          <span>{issue.subject}</span>
+          <span class="row-issueSubject">{issue.subject}</span>
         </td>
         <td>
-          <span>{issue.assignee}</span>
+          <span class="row-issueAssignee">{issue.assignee}</span>
         </td>
         <td>
-          <span>Open</span>
+          <span class="row-issueStatus">Open</span>
         </td>
         <td>
-          <span>{issue.priority}</span>
+          <span class="row-issuePriority">{issue.priority}</span>
         </td>
         <td>
-          <span>{issue.created}</span>
+          <span class="row-issueCreated">{issue.created}</span>
         </td>
         <td>
-          <span>{issue.dueDate}</span>
+          <span class="row-issueDueDate">{issue.dueDate}</span>
         </td>
         <td>
-          <span>15:30</span>
+          <span class="row-issueUpdate">15:30</span>
         </td>
         <td>
-          <span>Dang</span>
+          <span class="row-issueRegister">Dang</span>
         </td>
       </tr>
     </React.Fragment>

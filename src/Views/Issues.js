@@ -93,58 +93,93 @@ const Issues = ({issue}) => {
                 <table class="issue-table">
                     <thead>
                         <tr>
-                            <th class="sort" data-column-name="issueType" tabIndex="0">
+                            <th class="sort" id="issueType" tabIndex="0">
                                 <span class="sort__icon">
                                     Issue Type
                                 </span>
                             </th>
-                            <th class="sort" data-column-name="issueKey" tabIndex="0">
+                            <th class="sort" id="issueKey" tabIndex="0">
                                 <span class="sort__icon">
                                     Key
                                 </span>
                             </th>
-                            <th class="sort" data-column-name="issueSubject" tabIndex="0">
+                            <th class="sort" id="issueSubject" tabIndex="0">
                                 <span class="sort__icon">
                                     Subject
                                 </span>
                             </th>
-                            <th class="sort" data-column-name="issueAssignee" tabIndex="0">
+                            <th class="sort" id="issueAssignee" tabIndex="0">
                                 <span class="sort__icon">
                                     Assignee
                                 </span>
                             </th>
-                            <th class="sort" data-column-name="issueStatus" tabIndex="0">
+                            <th class="sort" id="issueStatus" tabIndex="0">
                                 <span class="sort__icon">
                                     Status
                                 </span>
                             </th>
-                            <th class="sort" data-column-name="issuePriority" tabIndex="0">
+                            <th class="sort" id="issuePriority" tabIndex="0">
                                 <span class="sort__icon">
                                     Priority
                                 </span>
                             </th>
-                            <th class="sort" data-column-name="issueCreated" tabIndex="0">
+                            <th class="sort" id="issueCreated" tabIndex="0">
                                 <span class="sort__icon">
                                     Created
                                 </span>
                             </th>
-                            <th class="sort" data-column-name="issueDuedate" tabIndex="0">
+                            <th class="sort" id="issueDuedate" tabIndex="0">
                                 <span class="sort__icon">
                                     Due date
                                 </span>
                             </th>
-                            <th class="sort" data-column-name="issueUpdate" tabIndex="0">
+                            <th class="sort" id="issueUpdate" tabIndex="0">
                                 <span class="sort__icon">
                                     Updated
                                 </span>
                             </th>
-                            <th class="sort" data-column-name="issueRegister" tabIndex="0">
+                            <th class="sort" id="issueRegister" tabIndex="0">
                                 <span class="sort__icon">
-                                    Register
+                                    Registered by
                                 </span>
                             </th>
                         </tr>
+                        
                     </thead>
+                    <tbody class="tbody">
+                        <tr>
+                            <td class="row-issueType">
+                                <span >Task</span>
+                            </td>
+                            <td class="row-issueKey">
+                                <span >123456-1</span>
+                            </td>
+                            <td class="row-issueSubject">
+                                <span >Make-Frontend</span>
+                            </td>
+                            <td class="row-issueAssignee">
+                                <span>Dang</span>
+                            </td>
+                            <td class="row-issueStatus">
+                                <span>Open</span>
+                            </td>
+                            <td class="row-issuePriority">
+                                <span>High</span>
+                            </td>
+                            <td class="row-issueCreated">
+                                <span>15-05-2021</span>
+                            </td>
+                            <td class="row-issueDueDate">
+                                <span>30-05-2021</span>
+                            </td>
+                            <td class="row-issueUpdate">
+                                <span>20-05-2021</span>
+                            </td>
+                            <td class="row-issueRegister">
+                                <span>Cuong</span>
+                            </td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
         </div>

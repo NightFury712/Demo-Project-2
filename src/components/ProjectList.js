@@ -1,9 +1,9 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 import '../css/ProjectList.css'
 
-const ProjectList = ({arrow, changeArrow}) => {
+const ProjectList = ({ arrow, changeArrow, changeFormAddPrj}) => {
   return (
     <React.Fragment>
       <div className="dashboard-contents-left">
@@ -19,6 +19,12 @@ const ProjectList = ({arrow, changeArrow}) => {
                 </span>
               </button>
             </h3>
+            <div className="title-group__edit-actions">
+              <div className="button__tooltip-top">
+                <button className="edit-actions__button" onClick={changeFormAddPrj}>+</button>
+                <span className="edit-actions__tooltip-top">Add Project</span>
+              </div>
+            </div>
           </div>
           <div className={`see-all-wrapper ${arrow ? 'is_opened-project-list' : ''}`}>
             <ul className="project-list -list-view">

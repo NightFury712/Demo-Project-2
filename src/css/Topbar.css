@@ -201,27 +201,52 @@
 }
 
 .data-list-link {
+  border: none;
+  outline: none;
+  background-color: #fff;
   display: block;
   text-align: left;
   width: 100%;
   height: 50px;
   border-bottom: 1px solid #e5e5e5;
+  cursor: pointer;
+}
+
+.data-list-link:hover {
+  transition: 0.22s;
+  background-color: #4cbd9b;
+  color: #fff;
+}
+
+.data-list-item .data-list-icon {
+  display: inline-block;
+  background-color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  width: 32px;
+  height: 32px;
+  margin-left: 10px;
 }
 
 .data-list .data-list-icon .fa-building{
-  padding-top: 12px;
-  padding-left: 10px;
-  /* vertical-align: middle; */
+  position: relative;
+  font-size: 20px;
+  padding-left: 5px;
+  top: calc(50% - 11px);
   color: grey;
 }
 
 
 
 .data-list .data-list-summary {
+  vertical-align: middle;
   padding-left: 5px;
+  font-size: 1.2rem;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .data-list .data-list-key {
+  vertical-align: middle;
   padding-left: 5px;
   font-size: 12px;
 }
@@ -274,6 +299,7 @@
   height: 30px;
   width: 100%;
   border-radius: 3px;
+  cursor: pointer;
 }
 
 .dropdown-menu-link:hover {
