@@ -21,7 +21,7 @@ const TimeLineList = ({ arrowTL, changeArrowTL }) => {
                 </button>
               </h3>
             </div>
-            <div id="timeline-content">
+            <div className={`timeline-content ${arrowTL ? 'is_opened-project-list' : ''}`}>
               <div className="timeline">
                 <ul className="timeline__stream">
                   <StreamUpdateItem />

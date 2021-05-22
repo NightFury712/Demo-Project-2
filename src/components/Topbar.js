@@ -1,9 +1,17 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, {useContext} from 'react'
 import '../css/Topbar.css'
+import ProjectListItem from '../items/ProjectListItem'
+import { AddContext } from '../provider/AddContext'
 
-const Topbar = ({ changeFormAddPrj, stateRecent, statePrj, changestatePrj , changeStateRecent, changeFormAddIssue , openHomePage}) => {
-  
+const Topbar = () => {
+  const handler = useContext(AddContext);
+
+  // const changeFormAddIssue = () => {
+  //   window.location.href = '/project/add-issue'
+  // }
+  const openDashboard = () => {
+    window.location.href = '/dashboard'
+  }
   return (
     <div className="header">
       <div className="header-left">
@@ -13,13 +21,13 @@ const Topbar = ({ changeFormAddPrj, stateRecent, statePrj, changestatePrj , chan
           </div>
           <ul className="top-nav-menu">
             <li className="top-nav-item">
-              <Link className="dashboard-link" to="/dashboard">
+              <button className="dashboard-link" onClick={openDashboard}>
                 <span className="dashboard-link-content">Dashboard</span>
-              </Link>
+              </button>
             </li>
             <li className="top-nav-item">
-              <button className="top-nav-project" onClick={changestatePrj}>Projects</button>
-              <div className={`dropdown-box project ${statePrj ? 'is_opened' : ''}`}>
+              <button className="top-nav-project" onClick={handler.changestatePrj}>Projects</button>
+              <div className={`dropdown-box project ${handler.statePrj ? 'is_opened' : ''}`}>
                 <div className="dropdown-box-header">
                   <div className="dropdown-box-title">Projects</div>
                 </div>
@@ -30,32 +38,24 @@ const Topbar = ({ changeFormAddPrj, stateRecent, statePrj, changestatePrj , chan
                 </div>
                 <div className="dropdown-box-content">
                   <ul className="data-list">
-                    <li className="data-list-item">
-                      <button className="data-list-link" onClick={openHomePage}>
-                        <span className="data-list-icon">
-                          <i className="far fa-building"></i>
-                        </span>
-                        <span className="data-list-summary">ProjectName</span>
-                        <span className="data-list-key">(123456)</span>
-                      </button>
-                    </li>
+                    <ProjectListItem />
                   </ul>
                 </div>
               </div>
             </li>
             <li className="top-nav-item">
-              <button id="addItemLink" onClick={changeStateRecent}>
+              <button id="addItemLink" onClick={handler.changeStateRecent}>
                 <i className="fas fa-plus-circle"></i>
               </button>
-              <ul className={`dropdown-menu ${stateRecent ? 'is_opened' : ''}`}>
+              <ul className={`dropdown-menu ${handler.stateRecent ? 'is_opened' : ''}`}>
                 <li className="dropdown-menu-item addIssue">
-                  <button className="dropdown-menu-link" onClick={changeFormAddIssue}>Add Issue</button>
+                  <button className="dropdown-menu-link" onClick={handler.changeFormAddIssue}>Add Issue</button>
                 </li>
                 <li className="dropdown-menu-item addProject">
-                  <button className="dropdown-menu-link" onClick={changeFormAddPrj}>Add Project</button>
+                  <button className="dropdown-menu-link" onClick={handler.changeFormAddPrj}>Add Project</button>
                 </li>
                 <li className="dropdown-menu-item addUser">
-                  <button className="dropdown-menu-link" onClick={changeStateRecent}>Add User</button>
+                  <button className="dropdown-menu-link" onClick={handler.changeFormAddMember}>Add User</button>
                 </li>
               </ul>
             </li>

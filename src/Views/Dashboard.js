@@ -7,7 +7,7 @@ import ProjectList from '../components/ProjectList'
 import TimeLineList from '../components/TimeLineList'
 
 
-const Dashboard = ({changeFormAddPrj, stateRecent,statePrj, changestatePrj, changeStateRecent, changeFormAddIssue, openHomePage}) => {
+const Dashboard = () => {
   const [arrow, setArrow] = useState(false);
   const [arrowTL, setArrowTL] = useState(false);
   const changeArrow = () => {
@@ -18,15 +18,7 @@ const Dashboard = ({changeFormAddPrj, stateRecent,statePrj, changestatePrj, chan
   }
   return (
     <React.Fragment>
-      <Topbar 
-        changeFormAddPrj={changeFormAddPrj} 
-        stateRecent={stateRecent} 
-        statePrj={statePrj} 
-        changestatePrj={changestatePrj} 
-        changeStateRecent={changeStateRecent}
-        changeFormAddIssue={changeFormAddIssue}
-        openHomePage={openHomePage}
-      />
+      <Topbar />
       <div id="container" role="main" className="core-wrapper-dashboard">
         <header id="header" className="content-header">
           <div className="header-icon-set__icon">
@@ -42,8 +34,7 @@ const Dashboard = ({changeFormAddPrj, stateRecent,statePrj, changestatePrj, chan
           <div className="dashboard-contents">
             <ProjectList 
               arrow={arrow} 
-              changeArrow={changeArrow} 
-              changeFormAddPrj={changeFormAddPrj}
+              changeArrow={changeArrow}
             />
             <TimeLineList arrowTL={arrowTL} changeArrowTL={changeArrowTL}/>
           </div>

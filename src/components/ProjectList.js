@@ -1,9 +1,11 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import { Link } from 'react-router-dom'
 
 import '../css/ProjectList.css'
+import { AddContext } from '../provider/AddContext';
 
-const ProjectList = ({ arrow, changeArrow, changeFormAddPrj}) => {
+const ProjectList = ({ arrow, changeArrow }) => {
+  const handler = useContext(AddContext);
   return (
     <React.Fragment>
       <div className="dashboard-contents-left">
@@ -21,7 +23,7 @@ const ProjectList = ({ arrow, changeArrow, changeFormAddPrj}) => {
             </h3>
             <div className="title-group__edit-actions">
               <div className="button__tooltip-top">
-                <button className="edit-actions__button" onClick={changeFormAddPrj}>+</button>
+                <button className="edit-actions__button" onClick={handler.changeFormAddPrj}>+</button>
                 <span className="edit-actions__tooltip-top">Add Project</span>
               </div>
             </div>
@@ -29,19 +31,21 @@ const ProjectList = ({ arrow, changeArrow, changeFormAddPrj}) => {
           <div className={`see-all-wrapper ${arrow ? 'is_opened-project-list' : ''}`}>
             <ul className="project-list -list-view">
               <li className="project-list__item">
-                <Link className="project-list__link-2" to="/project/home"></Link>
                 <div className="project-list__wrapper">
-                  <span className="project-list__info">
-                    <Link className="project-list__link" to="/project/home">
-                      <span class="project-list__icon" aria-hidden="true">
-                        <i className="far fa-building"></i>
-                      </span>
-                      <span className="project-list__name-group">
-                        <span className="project-list__name">Testing</span>
-                        <span className="project-list__key">123456</span>
-                      </span>
-                    </Link>
-                  </span>
+                  <Link className="project-list__link-2" to="/project/home">
+                    <span className="project-list__info">
+                      <Link className="project-list__link" to="/project/home">
+                        <span class="project-list__icon" aria-hidden="true">
+                          <i className="far fa-building"></i>
+                        </span>
+                        <span className="project-list__name-group">
+                          <span className="project-list__name">Testing</span>
+                          <span className="project-list__key">123456</span>
+                        </span>
+                      </Link>
+                    </span>
+                  </Link>
+
                 </div>
               </li>
             </ul>

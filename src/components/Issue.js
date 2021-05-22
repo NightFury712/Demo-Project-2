@@ -1,5 +1,4 @@
 import React from 'react'
-import '../css/Issue.css'
 
 const Issue = ({issue}) => {
   return (
