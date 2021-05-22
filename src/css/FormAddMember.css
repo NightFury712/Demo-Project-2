@@ -1,0 +1,103 @@
+.add-user-content-wrapper {
+  display: block;
+  padding: 30px;
+}
+
+.add-user-content-title {
+  padding-bottom: 30px;
+  font-weight: bold;
+  
+}
+
+.add-user-content-main {
+  color: #999;
+}
+
+.add-user-content-title__span {
+  padding-bottom: 5px;
+  border-bottom: 3px solid #4cbd9b;
+}
+
+.add-user-content-main__info {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+  
+}
+
+.add-user-content-main {
+  font-size: 0.9rem;
+
+}
+
+.add-user-content-main__email {
+  width: 400px;
+  margin-right: 10px;
+}
+
+.add-user-content-main__input-1 {
+  margin-bottom: 10px;
+}
+
+.add-user-content-main__input-1 .input__field-email {
+  width: 370px;
+  height: 20px;
+  outline: none;
+  border: 1px solid #999;
+  padding: 3px 8px;
+  border-radius: 2px;
+  margin-right: 23px;
+}
+
+.add-user-content-main__input-1 .input__field-email:focus {
+  border: 1px solid #6d94d4;
+}
+
+.select__field-role {
+  width: 100px;
+  height: 30px;
+  outline: none;
+  border: 1px solid #999;
+  border-radius: 2px;
+
+}
+
+.add-user-content-main__to-project {
+  margin-bottom: 50px;
+}
+
+.add-user-content-main__to-project .to-project-title {
+  margin-bottom: 10px;
+}
+
+.select__field-chose-project {
+  width: 200px;
+  height: 30px;
+  outline: none;
+  border: 1px solid #999;
+  border-radius: 2px;
+}
+
+.add-user-content-submit {
+  text-align: center;
+}
+
+.add-user-content-invite {
+  border: none;
+  outline: none;
+  width: 120px;
+  height: 35px;
+  border-radius: 4px;
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+  cursor: pointer;
+}
+
+.add-user-content-invite:hover {
+  background-color: #0400ff;
+}
+
+.add-user-content-dislpay {
+  display: none;
+}
