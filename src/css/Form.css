@@ -3,24 +3,29 @@
   padding: 0;
 }
 
-#h3_1{
+.full-form-setting {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+#h3_1 {
   margin-left: 33px;
   padding-top: 20px;
   padding-bottom: 30px;
 }
 
 .issue-content {
-  border: 1px groove  #f0f0f0;
+  border: 1px groove #f0f0f0;
   background-color: white;
   /* 
   padding: 10px;
   
   border-radius: 5px; */
   margin-top: 20px;
-  padding-top: 20px;  
+  padding-top: 20px;
   width: 1640px;
   height: 570px;
-  
+
   text-align: center;
   margin-left: 33px;
 }
@@ -29,14 +34,15 @@
   text-align: left;
   text-decoration: none solid rgb(34, 34, 34);
   text-size-adjust: 100%;
-  border: 1px groove #b8b8b8; 
+  border: 1px groove #b8b8b8;
   width: 210px;
   height: 33px;
   margin-left: 33px;
   border-style: solid;
 }
 
-textarea:focus, select:focus {
+textarea:focus,
+select:focus {
   outline: none;
   background-color: blanchedalmond;
   border-color: #34886f;
@@ -90,7 +96,12 @@ td {
   text-align: left;
 }
 
-.priority, .category, #date-time ,.assignee, .milestone, .version{
+.priority,
+.category,
+#date-time,
+.assignee,
+.milestone,
+.version {
   border: 1px groove #b8b8b8;
   text-decoration: none solid rgb(119, 119, 119);
   text-size-adjust: 100%;
@@ -102,31 +113,40 @@ td {
   margin-left: auto;
 }
 
-
 .submit {
-  float: right;
+
 }
 
-/* button {
-  border: none;
-  outline: none;
-  border-radius: 3px;
+.add {
+  background-color: #2c9a7a;
+  border: solid 1px #2c9a7a;
+  border-radius: 1px;
+  color: white;
+  width: 100px;
+  height: 30px;
   cursor: pointer;
   padding: 5px 10px;
-  margin: 5px;
-} */
-
-.add {
-  background-color: #4cbd9b;
-  color: white;
+  margin-top: 20px;
+  margin-left: 5px;
+ 
 }
 
 .add:hover {
+  
   background-color: #35ac88;
 }
 
 .preview {
-  background-color: white;
+  background-color: #f2faf8;
+  border: solid 1px #2c9a7a;
+  border-radius: 1px;
+  color: black;
+  width: 100px;
+  height: 30px;
+  cursor: pointer;
+  padding: 5px 10px;
+  margin-top: 20px;
+  margin-right: 5px;
 }
 
 .preview:hover {
@@ -164,7 +184,4 @@ td {
   font: 13px / 20px "Open Sans", Meiryo, メイリオ, Arial, sans-serif;
   outline: rgb(119, 119, 119) none 0px;
   padding: 10px 20px 9px 10px;
-}/*#label_1*/
-
-
-
+} 
