@@ -12,7 +12,7 @@
 }
 
 .add-project-form-display {
-  visibility: hidden;
+  display: none;
 }
 
 .add-project-content-wrapper {

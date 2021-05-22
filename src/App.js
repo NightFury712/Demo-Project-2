@@ -7,22 +7,20 @@ import {
   BrowserRouter as Router,
   Route,
 } from "react-router-dom";
-import {useState} from 'react'
+import { useState } from 'react'
 import React from "react";
-import FormAddProject from './components/FormAddProject'
+import FormAdd from './components/FormAdd'
+import {AddContext} from './provider/AddContext'
 
 
 export default function App() {
   const [formAdd, setFormAdd] = useState(false);
+  const [formAddIssue, setFormAddIssue] = useState(false);
+  const [formAddPrj, setFormAddPrj] = useState(false);
+  const [formAddMember, setFormAddMember] = useState(false);
   const [stateRecent, setStateRecent] = useState(true);
   const [statePrj, setStatePrj] = useState(true);
-  
-  const openHomePage = () => {
-    window.location.href='/project/home'
-  }
-  const changeFormAddIssue = () => {
-    window.location.href='/project/add-issue'
-  }
+
   const changestatePrj = () => {
     setStatePrj(!statePrj);
     setStateRecent(true);
@@ -31,41 +29,64 @@ export default function App() {
     setStateRecent(!stateRecent);
     setStatePrj(true);
   }
-  const changeFormAddPrj = () => {
+  const changeFormAdd = () => {
     setFormAdd(!formAdd);
+    setFormAddIssue(false)
+    setFormAddMember(false)
+    setFormAddPrj(false)
     setStateRecent(true);
   }
+  const changeFormAddPrj = () => {
+    setFormAdd(!formAdd)
+    setFormAddPrj(!formAddPrj)
+    setFormAddIssue(false)
+    setFormAddMember(false)
+    setStateRecent(true);
+  }
+  const changeFormAddIssue = () => {
+    setFormAdd(!formAdd)
+    setFormAddPrj(false)
+    setFormAddIssue(!formAddIssue)
+    setFormAddMember(false)
+    setStateRecent(true);
+  }
+  const changeFormAddMember = () => {
+    setFormAdd(!formAdd)
+    setFormAddPrj(false)
+    setFormAddIssue(false)
+    setStateRecent(true);
+    setFormAddMember(!formAddMember)
+  }
+
   return (
+    <AddContext.Provider value={
+      {
+      statePrj,
+      stateRecent,
+      formAdd, 
+      formAddIssue, 
+      formAddMember, 
+      formAddPrj,
+      changeFormAdd,
+      changeFormAddIssue, 
+      changeFormAddMember, 
+      changeFormAddPrj,
+      changestatePrj,
+      changeStateRecent
+      }}>
+      
     <React.Fragment>
-      <FormAddProject 
-        formAdd={formAdd} 
-        changeFormAddPrj={changeFormAddPrj}
-      />
+      <FormAdd />
       <Router>
         <Route path="/dashboard">
-          <Dashboard 
-            changeFormAddPrj={changeFormAddPrj} 
-            stateRecent={stateRecent} 
-            statePrj={statePrj} 
-            changestatePrj={changestatePrj} 
-            changeStateRecent={changeStateRecent}
-            changeFormAddIssue={changeFormAddIssue}
-            openHomePage={openHomePage}
-          />
+          <Dashboard />
         </Route>
-        <Route path="/project" >
-          <Project 
-            changeFormAddPrj={changeFormAddPrj} 
-            stateRecent={stateRecent} 
-            statePrj={statePrj} 
-            changestatePrj={changestatePrj} 
-            changeStateRecent={changeStateRecent}
-            changeFormAddIssue={changeFormAddIssue}
-            openHomePage={openHomePage}
-          />
+        <Route path="/project">
+          <Project />
         </Route>
       </Router>
     </React.Fragment>
+    </AddContext.Provider>
   );
 }
 

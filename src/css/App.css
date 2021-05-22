@@ -12,6 +12,7 @@ body {
 .nav {
   position: fixed;
   display: table-cell;
+  z-index: 800;
   top: 50px;
   left: 0;
   right: 0;
