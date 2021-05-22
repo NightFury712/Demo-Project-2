@@ -3,6 +3,7 @@ import '../css/FormAddProject.css'
 import FormAddProject from './FormAddProject'
 import FormChosePrj from './FormChosePrj'
 import { AddContext } from '../provider/AddContext'
+import FormAddMember from '../components/FormAddMember'
 
 const FormAdd = () => {
   const handler = useContext(AddContext);
@@ -13,6 +14,7 @@ const FormAdd = () => {
       </div>
       <FormAddProject />
       <FormChosePrj />
+      <FormAddMember />
     </div>
   );
 }
