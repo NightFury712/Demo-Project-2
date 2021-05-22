@@ -50,16 +50,23 @@
     text-decoration: none;
 }
 
-.content-main{
-    margin-top: 0;
+.project-settings-content-main-background{
+    background-color: white;
     width: 100%;
+    height: 100%;
+}
+
+.project-settings-content-main{
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 70%;
     float: none;
     padding-top: 20px;
     padding-left: 32px;
     padding-right: 32px;
 }
 
-.settings-title{
+.project-settings-settings-title{
     font-size: 1.2rem;
     line-height: 2rem;
     font-weight: 700;
@@ -69,7 +76,7 @@
     margin-bottom: 20px;
 }
 
-.content-wrapper {
+.project-settings-content-wrapper {
     display: flex;
 }
 
@@ -90,7 +97,7 @@
     padding-left: 4px;
 }
 
-.input-text{
+.project-settings-input-text{
     line-height: 1.5rem;
     min-height: 2rem;
     border-radius: 6px;
@@ -109,7 +116,7 @@
     margin-bottom: 8px;
 }
 
-.checkboxLabel{
+.project-settings-checkboxLabel{
     font-size: 1rem;
     color: black;
     font-weight: 400;
@@ -130,14 +137,14 @@
     margin-top: 5px;
 }
 
-.filter1 {
+.form-element-item-filter {
     border: 2px solid rgb(187, 182, 182);
     border-radius: 6px;
     width: 250px;
     height: 40px;
 }
 
-.button1{
+.project-settings-button1{
     background-color: #2c9a7a;
     border: solid 10px #2c9a7a;
     border-radius: 15px;
@@ -145,7 +152,7 @@
     font-weight: 1000;
 }
 
-.button2{
+.project-settings-button2{
     margin-bottom: 20px;
     background-color: #2c9a7a;
     border: solid 5px #2c9a7a;
@@ -156,21 +163,21 @@
 
 .card-default {
     border-radius: 5px;
-    width: 80%;
-    background-color: white;
+    width: 100%;
+    background-color:#e0ebeb;
 }
 
-.input-text1{
+.project-settings-input-text1{
     margin-top: 30px;
     margin-bottom: 10px;
     border: 1px solid rgb(210, 210, 210);
     box-sizing: border-box;
-    width: 1150px;
+    width: 95%;
     height: 40px;
     border-radius: 4px;
 }
 
-.input-text2{
+.form-element-item-input-text2{
     margin-right:100px;
     padding: 5px;
     border: 1px solid rgb(210, 210, 210);
@@ -222,10 +229,10 @@
     line-height: 13px;
 }
 
-.filter2{
+.form-element-item-filter2{
     padding: 5px;
     border: 1px solid rgb(210, 210, 210);
-    width: 300px;
+    width: 200;
     border-radius: 3px;
     box-sizing: border-box;
     font-size: 16px;
@@ -237,7 +244,7 @@
     font-size: 1rem;
     line-height: 3rem;
     font-weight: 600;
-    margin-top: 0;
+    margin-top: 60px;
     margin-bottom: 20px;
 }
 
@@ -249,10 +256,9 @@
     display: flex;
     flex-direction: row;
     line-height: 13px;
-    margin-left: ;
 }
 
-.input-text2{
+.project-settings-input-text2{
     margin-right:100px;
     padding: 5px;
     border: 1px solid rgb(210, 210, 210);
@@ -264,7 +270,7 @@
     height: 30px;
 }
 
-th{
+.project-settings-th{
     text-align: center;
     height: 70%;
     color: teal;
@@ -272,13 +278,13 @@ th{
     line-height: 1rem;
 }
 
-table {
-    margin-top: 20px;
+.project-settings-table {
+    margin-top: 30px;
     border-collapse: unset;
-    width: 80%;
+    width: 100%;
 }
 
-td{
+.project-settings-td{
     padding: 15px;
     border-bottom: 1px solid #ddd;
     height: 10%;
