@@ -129,6 +129,7 @@ const ProjectSettings = () => {
                     </div>
                   </div>
                 </div>
+                <footer id="footer" class="project-setting-content-footer" role="contentinfo"></footer>
               </Route>
 
               <Route exact path={`${path}/members`}>
@@ -199,6 +200,7 @@ const ProjectSettings = () => {
                       </tr>
                     </table>
                   </div>
+                  <footer id="footer" class="project-setting-content-footer" role="contentinfo"></footer>
                 </div>
               </Route>
             </Switch>

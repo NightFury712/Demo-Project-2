@@ -244,7 +244,7 @@
     font-size: 1rem;
     line-height: 3rem;
     font-weight: 600;
-    margin-top: 60px;
+    margin-top: 20px;
     margin-bottom: 20px;
 }
 
@@ -279,7 +279,7 @@
 }
 
 .project-settings-table {
-    margin-top: 30px;
+    margin-top: 20px;
     border-collapse: unset;
     width: 100%;
 }
@@ -288,6 +288,13 @@
     padding: 15px;
     border-bottom: 1px solid #ddd;
     height: 10%;
+}
+
+.project-setting-content-footer{
+    padding-top: 80px;
+    padding-bottom: 20px;
+    text-align: center;
+    background-color: white;
 }
 
 
