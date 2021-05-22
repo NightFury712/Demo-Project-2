@@ -128,10 +128,13 @@ const Form = ({ issue, setIssue }) => {
           </div>
         </div>
         <div className="submit">
+          <div className="div1">
           <button className="preview">Preview</button>
           <button className="add" onClick={changeIssue}>
+            
             Add
           </button>
+          </div>
         </div>
       </div>
     </React.Fragment>
