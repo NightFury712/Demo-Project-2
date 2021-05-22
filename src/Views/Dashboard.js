@@ -20,6 +20,7 @@ const Dashboard = () => {
     <React.Fragment>
       <Topbar />
       <div id="container" role="main" className="core-wrapper-dashboard">
+        
         <header id="header" className="content-header">
           <div className="header-icon-set__icon">
             <i className="far fa-building"></i>
@@ -32,11 +33,11 @@ const Dashboard = () => {
         </header>
         <div id="binding-main-dashboard">
           <div className="dashboard-contents">
-            <ProjectList 
-              arrow={arrow} 
+            <ProjectList
+              arrow={arrow}
               changeArrow={changeArrow}
             />
-            <TimeLineList arrowTL={arrowTL} changeArrowTL={changeArrowTL}/>
+            <TimeLineList arrowTL={arrowTL} changeArrowTL={changeArrowTL} />
           </div>
         </div>
       </div>

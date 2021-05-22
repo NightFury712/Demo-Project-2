@@ -7,10 +7,11 @@ import {
   BrowserRouter as Router,
   Route,
 } from "react-router-dom";
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import React from "react";
 import FormAdd from './components/FormAdd'
-import {AddContext} from './provider/AddContext'
+import { AddContext } from './provider/AddContext'
+// import axios from 'axios'
 
 
 export default function App() {
@@ -21,6 +22,21 @@ export default function App() {
   const [stateRecent, setStateRecent] = useState(true);
   const [statePrj, setStatePrj] = useState(true);
 
+  const [listProject, setListProject] = useState([]);
+
+  useEffect(() => {
+    // axios.get("http://localhost:5000/project/getAll")
+    //   .then(res => setListProject(res.data))
+
+    const getData = async () => {
+      const response = await fetch("http://localhost:5000/project/getAll")
+      const responseJSON = await response.json();
+      const data = responseJSON;
+      setListProject(data);
+    }
+    getData();
+  }, [])
+  // console.log(listProject);
   const changestatePrj = () => {
     setStatePrj(!statePrj);
     setStateRecent(true);
@@ -37,55 +53,61 @@ export default function App() {
     setStateRecent(true);
   }
   const changeFormAddPrj = () => {
-    setFormAdd(!formAdd)
-    setFormAddPrj(!formAddPrj)
+    setFormAdd(true)
+    setFormAddPrj(true)
     setFormAddIssue(false)
     setFormAddMember(false)
     setStateRecent(true);
+
   }
   const changeFormAddIssue = () => {
-    setFormAdd(!formAdd)
+    setFormAdd(true)
     setFormAddPrj(false)
-    setFormAddIssue(!formAddIssue)
+    setFormAddIssue(true)
     setFormAddMember(false)
     setStateRecent(true);
   }
   const changeFormAddMember = () => {
-    setFormAdd(!formAdd)
+    setFormAdd(true)
     setFormAddPrj(false)
     setFormAddIssue(false)
     setStateRecent(true);
-    setFormAddMember(!formAddMember)
+    setFormAddMember(true)
   }
 
   return (
+    
     <AddContext.Provider value={
       {
-      statePrj,
-      stateRecent,
-      formAdd, 
-      formAddIssue, 
-      formAddMember, 
-      formAddPrj,
-      changeFormAdd,
-      changeFormAddIssue, 
-      changeFormAddMember, 
-      changeFormAddPrj,
-      changestatePrj,
-      changeStateRecent
+        statePrj,
+        stateRecent,
+        formAdd,
+        formAddIssue,
+        formAddMember,
+        formAddPrj,
+        listProject,
+        changeFormAdd,
+        changeFormAddIssue,
+        changeFormAddMember,
+        changeFormAddPrj,
+        changestatePrj,
+        changeStateRecent
       }}>
-      
-    <React.Fragment>
-      <FormAdd />
-      <Router>
-        <Route path="/dashboard">
-          <Dashboard />
-        </Route>
-        <Route path="/project">
-          <Project />
-        </Route>
-      </Router>
-    </React.Fragment>
+
+      <React.Fragment>
+        <FormAdd />
+        <Router>
+          <Route path="/dashboard">
+            <React.Fragment>
+              
+              <Dashboard />
+            </React.Fragment>
+          </Route>
+          <Route path="/project">
+            <Project />
+          </Route>
+        </Router>
+      </React.Fragment>
     </AddContext.Provider>
   );
 }

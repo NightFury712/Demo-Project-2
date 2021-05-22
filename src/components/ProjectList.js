@@ -1,4 +1,4 @@
-import React, {useContext} from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 
 import '../css/ProjectList.css'
@@ -30,24 +30,27 @@ const ProjectList = ({ arrow, changeArrow }) => {
           </div>
           <div className={`see-all-wrapper ${arrow ? 'is_opened-project-list' : ''}`}>
             <ul className="project-list -list-view">
-              <li className="project-list__item">
-                <div className="project-list__wrapper">
-                  <Link className="project-list__link-2" to="/project/home">
-                    <span className="project-list__info">
-                      <Link className="project-list__link" to="/project/home">
-                        <span class="project-list__icon" aria-hidden="true">
-                          <i className="far fa-building"></i>
-                        </span>
-                        <span className="project-list__name-group">
-                          <span className="project-list__name">Testing</span>
-                          <span className="project-list__key">123456</span>
-                        </span>
-                      </Link>
-                    </span>
-                  </Link>
+              {handler.listProject.map(item => {
+                return (<li className="project-list__item" key={item.project_Key}>
+                  <div className="project-list__wrapper">
+                    <Link className="project-list__link-2" to="/project/home">
+                      <span className="project-list__info">
+                        <Link className="project-list__link" to="/project/home">
+                          <span class="project-list__icon" aria-hidden="true">
+                            <i className="far fa-building"></i>
+                          </span>
+                          <span className="project-list__name-group">
+                            <span className="project-list__name">{item.project_Name}</span>
+                            <span className="project-list__key">{item.project_Key}</span>
+                          </span>
+                        </Link>
+                      </span>
+                    </Link>
+                  </div>
+                </li>)
+              })}
 
-                </div>
-              </li>
+
             </ul>
           </div>
         </section>

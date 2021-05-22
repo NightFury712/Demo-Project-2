@@ -17,13 +17,9 @@
 .issue-content {
   border: 1px groove #f0f0f0;
   background-color: white;
-  /* 
-  padding: 10px;
-  
-  border-radius: 5px; */
   margin-top: 20px;
-  padding-top: 20px;
-  width: 1640px;
+  padding: 20px;
+  width: 80%;
   height: 570px;
 
   text-align: center;
@@ -51,7 +47,7 @@ select:focus {
 }
 
 #textarea {
-  width: 1590px;
+  width: 95%;
   height: 270px;
   padding:5px;
   margin:5px;
@@ -61,7 +57,7 @@ select:focus {
   border: 1px groove #b8b8b8;
   margin-top: 10px;
   height: 32px;
-  width: 1640px;
+  width: 82.5%;
   margin-left: 33px;
 }
 
@@ -116,7 +112,8 @@ td {
 }
 
 .submit {
-  width: 87%;
+  margin-left: 40px;
+  width: 80%;
   display: flex; 
   justify-content: flex-end;
 }

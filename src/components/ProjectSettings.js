@@ -13,25 +13,25 @@ const ProjectSettings = () => {
         <HeaderProject />
 
         <div className="project-settings-content-wrapper">
-            <article style={{ width: "20%" }}>
-              <ul className="setting-nav">
-                <li className="generals-menu">
-                  <h2 className="settings-nav-title">
-                    <i className="fas fa-cog"></i>
+          <article style={{ width: "20%" }}>
+            <ul className="setting-nav">
+              <li className="generals-menu">
+                <h2 className="settings-nav-title">
+                  <i className="fas fa-cog"></i>
                     Project Settings
                   </h2>
 
-                  <ul className="setting-nav-menu">
-                    <li className="is_active">
-                      <Link to="/project/projectSettings">General</Link>
-                    </li>
-                    <li className="is_active">
-                      <Link to="/project/projectSettings/members">Members</Link>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </article>
+                <ul className="setting-nav-menu">
+                  <li className="is_active">
+                    <Link to="/project/projectSettings">General</Link>
+                  </li>
+                  <li className="is_active">
+                    <Link to="/project/projectSettings/members">Members</Link>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </article>
           <aside style={{ width: "80%", height: "100%" }}>
             <Switch>
               <Route exact path={`${path}/`}>
@@ -48,7 +48,7 @@ const ProjectSettings = () => {
                             <label className="form-element-label" for="projectName">
                               Project Name
                             </label>
-                            <input type="text" name="project.name"  className="project-settings-input-text" id="projectName" size="30" maxLength="25" required="required">
+                            <input type="text" name="project.name" className="project-settings-input-text" id="projectName" size="30" maxLength="25" required="required">
                             </input>
                           </div>
 
@@ -56,7 +56,7 @@ const ProjectSettings = () => {
                             <label className="form-element-label" for="projectKey">
                               Project Key
                             </label>
-                            <input type="text" name="project.key"  className="project-settings-input-text" id="projectKey" size="30" maxLength="25" aria-describedby="editProjectKey_describe" required="required">
+                            <input type="text" name="project.key" className="project-settings-input-text" id="projectKey" size="30" maxLength="25" aria-describedby="editProjectKey_describe" required="required">
                             </input>
                             <p className="form-element-description">
                               "The project key is a unique identifier for a project. A short, concise key is recommended."
@@ -98,25 +98,25 @@ const ProjectSettings = () => {
                       <div class="form-element-item">
                         <input type="checkbox" id="projectSetting.useOriginalImageSizeAtWiki" className="input-checkbox"></input>
                         <label for="projectSetting.useOriginalImageSizeAtWiki" className="project-settings-checkboxLabel">
-                        Enable Wiki tree view
+                          Enable Wiki tree view
                         </label>
                       </div>
                       <div class="form-element-item">
                         <input type="checkbox" id="projectSetting.useOriginalImageSizeAtWiki" className="input-checkbox"></input>
                         <label for="projectSetting.useOriginalImageSizeAtWiki" className="project-settings-checkboxLabel">
-                        Display images in Wikis in their original size
+                          Display images in Wikis in their original size
                         </label>
                       </div>
                       <div class="form-element-item">
                         <input type="checkbox" id="projectSetting.projectLeaderCanEditProjectLeader" className="input-checkbox"></input>
                         <label for="projectSetting.projectLeaderCanEditProjectLeader" className="project-settings-checkboxLabel">
-                        Allow project administrators to manage each other
+                          Allow project administrators to manage each other
                         </label>
                       </div>
                       <div class="form-element-item">
                         <input type="checkbox" id="project.archived" className="input-checkbox"></input>
                         <label for="project.archived" className="project-settings-checkboxLabel">
-                        Archive this project
+                          Archive this project
                         </label>
                         <div class="form-element-description" id="projectaArchived_describe">
                           Note: If checked, this project will no longer appear on the Dashboard, but you will still see it in gray in the project list.
@@ -153,7 +153,7 @@ const ProjectSettings = () => {
                           <div display="flex">
                             <input type="text" autocomplete="nop" className="form-element-item-input-text2" placeholder="     Type in email address..."></input>
                             <select className="form-element-item-filter2">
-                            <option >Member</option>
+                              <option >Member</option>
                               <option >Administrator</option>
                               <option >Guest</option>
                             </select>
@@ -169,35 +169,26 @@ const ProjectSettings = () => {
 
                     <h3 class="project-members">Project Members (1 members)</h3>
 
-                    <div className="card-default search-controller">
-                      <div className="form-element-item form-margin-top">
-                        <label className="form-add-member-label">Filter user</label>
-                        <div display="flex" className="form-element-item">
-                          <input type="text" autocomplete="nop" className="form-element-item-input-text2" placeholder="     Search in UserID, Nickname or Email address"></input>
-                          <select className="form-element-item-filter2">
-                            <option> </option>
-                            <option>All users</option>
-                            <option >HUST All Members</option>
-                          </select>
-                        </div>
-                      </div>                   
-                    </div>
-
                     <table className="project-settings-table">
-                      <tr>
-                        <th className="project-settings-th">Nick name</th>
-                        <th className="project-settings-th">Email Address</th>
-                        <th className="project-settings-th">Role</th>
-                        <th className="project-settings-th">Join on</th>
-                        <th className="project-settings-th">Remove</th>
-                      </tr>
-                      <tr>
-                        <td className="project-settings-td">Bùi Tiến Đạt</td>
-                        <td className="project-settings-td">dat.bt183880@sis.hust.edu.vn</td>
-                        <td className="project-settings-td">Administrator</td>
-                        <td className="project-settings-td">May 18</td>
-                        <td className="project-settings-td"></td>
-                      </tr>
+                      <thead className="project-settings-table-head">
+                        <tr>
+                          <th className="project-settings-th">Nick name</th>
+                          <th className="project-settings-th">Email Address</th>
+                          <th className="project-settings-th">Role</th>
+                          <th className="project-settings-th">Join on</th>
+                          <th className="project-settings-th">Remove</th>
+                        </tr>
+                      </thead>
+                      <tbody className="project-settings-table-body">
+                        <tr>
+                          <td className="project-settings-td">Bùi Tiến Đạt</td>
+                          <td className="project-settings-td">dat.bt183880@sis.hust.edu.vn</td>
+                          <td className="project-settings-td">Administrator</td>
+                          <td className="project-settings-td">May 18</td>
+                          <td className="project-settings-td"></td>
+                        </tr>
+                      </tbody>
+
                     </table>
                   </div>
                   <footer id="footer" class="project-setting-content-footer" role="contentinfo"></footer>

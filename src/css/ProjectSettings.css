@@ -297,7 +297,9 @@
     background-color: white;
 }
 
-
+.project-settings-table-body, .project-settings-table-head {
+    text-align: center;
+}
 
 
 
