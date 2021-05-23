@@ -4,10 +4,10 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  NavLink
+  NavLink,
+  useParams
 } from "react-router-dom";
 import Issues from '../Views/Issues';
-import leftNavLink from '../items/LeftNavLink'
 import { useState } from 'react'
 import Board from './Board'
 import ProjectSettings from './ProjectSettings'
@@ -15,7 +15,7 @@ import Home from '../Views/Home'
 
 const Navbar = () => {
   const [issue, setIssue] = useState([]);
-
+  const {prjKey} = useParams();
   return (
     <Router>
       <div className="main-content">
@@ -23,18 +23,46 @@ const Navbar = () => {
           <div className="logo">
             <label>Bug tracking</label>
           </div>
-          {leftNavLink.map((item) => {
-            return (
-              <span className="nav-link" key={item.href}>
-                <NavLink activeClassName="actived" className="link" to={item.href}>
-                  <span className="link-content">
-                    {item.icon}
-                    <span className="link-span"> {item.content}</span>
-                  </span>
-                </NavLink>
+          <span className="nav-link">
+            <NavLink activeClassName="actived" className="link" to={`/project/${prjKey}/home`}>
+              <span className="link-content">
+              <i className="fas fa-home"></i>
+                <span className="link-span"> Home</span>
               </span>
-            )
-          })}
+            </NavLink>
+          </span>
+          <span className="nav-link">
+            <NavLink activeClassName="actived" className="link" to={`/project/${prjKey}/add-issue`}>
+              <span className="link-content">
+              <i className="fas fa-plus"></i>
+                <span className="link-span"> Add Issues</span>
+              </span>
+            </NavLink>
+          </span>
+          <span className="nav-link">
+            <NavLink activeClassName="actived" className="link" to={`/project/${prjKey}/issues`}>
+              <span className="link-content">
+              <i className="far fa-list-alt"></i>
+                <span className="link-span"> Issues</span>
+              </span>
+            </NavLink>
+          </span>
+          <span className="nav-link">
+            <NavLink activeClassName="actived" className="link" to={`/project/${prjKey}/board`}>
+              <span className="link-content">
+              <i className="fas fa-chart-bar"></i>
+                <span className="link-span"> Board</span>
+              </span>
+            </NavLink>
+          </span>
+          <span className="nav-link">
+            <NavLink activeClassName="actived" className="link" to={`/project/${prjKey}/projectSettings`}>
+              <span className="link-content">
+              <i class="fas fa-cog"></i>
+                <span className="link-span"> Project Settings</span>
+              </span>
+            </NavLink>
+          </span>
         </nav>
 
 
@@ -42,19 +70,19 @@ const Navbar = () => {
             renders the first one that matches the current URL. */}
         <div className="nav-content">
           <Switch>
-            <Route path="/project/add-issue">
+            <Route path="/project/:prjKey/add-issue">
               <Form issue={issue} setIssue={setIssue} />
             </Route>
-            <Route path="/project/issues">
+            <Route path="/project/:prjKey/issues">
               <Issues issue={issue} />
             </Route>
-            <Route path="/project/home">
+            <Route path="/project/:prjKey/home">
               <Home />
             </Route>
-            <Route path="/project/board">
+            <Route path="/project/:prjKey/board">
               <Board />
             </Route>
-            <Route path="/project/projectSettings">
+            <Route path="/project/:prjKey/projectSettings">
               <ProjectSettings />
             </Route>
           </Switch>

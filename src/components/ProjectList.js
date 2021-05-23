@@ -33,9 +33,9 @@ const ProjectList = ({ arrow, changeArrow }) => {
               {handler.listProject.map(item => {
                 return (<li className="project-list__item" key={item.project_Key}>
                   <div className="project-list__wrapper">
-                    <Link className="project-list__link-2" to="/project/home">
+                    <Link className="project-list__link-2" to={`/project/${item.project_Key}/home`}>
                       <span className="project-list__info">
-                        <Link className="project-list__link" to="/project/home">
+                        <Link className="project-list__link" to={`/project/${item.project_Key}/home`}>
                           <span class="project-list__icon" aria-hidden="true">
                             <i className="far fa-building"></i>
                           </span>

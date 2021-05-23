@@ -42,7 +42,7 @@ const FormAddProject = () => {
           <p className="form-element__description" id="projectKey_described">The project key is a unique identifier for a project. A short, concise key is recommended.<br></br> (e.g. Project name has project key BLG_2) Uppercase letters (A-Z), numbers (0-9) and underscore (_) can be used.</p>
         </div>
         <div className="_t-center">
-          <button type="button" className="add-project-button-submit" onClick={addProjectHandler}>Submit</button>
+          <button type="submit" className="add-project-button-submit" onClick={addProjectHandler}>Submit</button>
         </div>
       </form>
     </div>

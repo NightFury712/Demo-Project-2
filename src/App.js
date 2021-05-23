@@ -23,9 +23,10 @@ export default function App() {
   const [statePrj, setStatePrj] = useState(true);
 
   const [listProject, setListProject] = useState([]);
+  const [listUser, setListUser] = useState([]);
 
   useEffect(() => {
-    const getData = () => {
+    const getlistPrj = () => {
       fetch("http://localhost:5000/project/getAll")
         .then(res => res.json())
         .then(data => {
@@ -33,9 +34,17 @@ export default function App() {
         })
         .catch(err => console.log(err))
     }
-    getData();
+    const getlistUser = () => {
+      fetch("http://localhost:5000/member/getAll/project_test")
+        .then(res => res.json())
+        .then(data => {
+          setListUser(data);
+        })
+        .catch(err => console.log(err))
+    }
+    getlistPrj();
+    getlistUser();
   }, [])
-  // console.log(listProject);
   const changestatePrj = () => {
     setStatePrj(!statePrj);
     setStateRecent(true);
@@ -85,6 +94,7 @@ export default function App() {
         formAddMember,
         formAddPrj,
         listProject,
+        listUser,
         changeFormAdd,
         changeFormAddIssue,
         changeFormAddMember,
@@ -102,7 +112,7 @@ export default function App() {
               <Dashboard />
             </React.Fragment>
           </Route>
-          <Route path="/project">
+          <Route path="/project/:prjKey">
             <Project />
           </Route>
         </Router>

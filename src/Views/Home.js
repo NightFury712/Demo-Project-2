@@ -4,6 +4,7 @@ import StreamUpDateItem from '../items/StreamUpdateItem'
 import '../css/Home.css'
 
 const Home = () => {
+  
   return (
     <div className="content-outer">
       <HeaderProject />

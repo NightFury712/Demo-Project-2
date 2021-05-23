@@ -7,7 +7,7 @@ const ProjectListItem = () => {
     <React.Fragment>
       {handler.listProject.map(item => {
         return (<li className="data-list-item" key={item.project_Key}>
-          <button className="data-list-link" onClick={() => { window.location.href = "/project/home" }}>
+          <button className="data-list-link" onClick={() => { window.location.href = `/project/${item.project_Key}/add-issue` }}>
             <span className="data-list-icon">
               <i className="far fa-building"></i>
             </span>
