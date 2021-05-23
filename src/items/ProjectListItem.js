@@ -1,18 +1,22 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { AddContext } from '../provider/AddContext';
 
 const ProjectListItem = () => {
-  
+  const handler = useContext(AddContext);
   return (
     <React.Fragment>
-      <li className="data-list-item">
-        <button className="data-list-link" onClick={() => { window.location.href = "/project/home" }}>
-          <span className="data-list-icon">
-            <i className="far fa-building"></i>
-          </span>
-          <span className="data-list-summary">ProjectName</span>
-          <span className="data-list-key">(123456)</span>
-        </button>
-      </li>
+      {handler.listProject.map(item => {
+        return (<li className="data-list-item" key={item.project_Key}>
+          <button className="data-list-link" onClick={() => { window.location.href = "/project/home" }}>
+            <span className="data-list-icon">
+              <i className="far fa-building"></i>
+            </span>
+            <span className="data-list-summary">{item.project_Name}</span>
+            <span className="data-list-key">({item.project_Key})</span>
+          </button>
+        </li>)
+      })}
+
     </React.Fragment>
   );
 }

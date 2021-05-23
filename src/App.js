@@ -25,14 +25,13 @@ export default function App() {
   const [listProject, setListProject] = useState([]);
 
   useEffect(() => {
-    // axios.get("http://localhost:5000/project/getAll")
-    //   .then(res => setListProject(res.data))
-
-    const getData = async () => {
-      const response = await fetch("http://localhost:5000/project/getAll")
-      const responseJSON = await response.json();
-      const data = responseJSON;
-      setListProject(data);
+    const getData = () => {
+      fetch("http://localhost:5000/project/getAll")
+        .then(res => res.json())
+        .then(data => {
+          setListProject(data);
+        })
+        .catch(err => console.log(err))
     }
     getData();
   }, [])
@@ -76,7 +75,7 @@ export default function App() {
   }
 
   return (
-    
+
     <AddContext.Provider value={
       {
         statePrj,
@@ -99,7 +98,7 @@ export default function App() {
         <Router>
           <Route path="/dashboard">
             <React.Fragment>
-              
+
               <Dashboard />
             </React.Fragment>
           </Route>
