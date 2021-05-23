@@ -1,20 +1,12 @@
 import React from 'react'
 import '../css/Board.css'
+import HeaderProject from '../items/HeaderProject';
 
 const Board = () => {
 	return (
 		<React.Fragment>
 			<div className="full-board">
-				<div className="wrap-header">
-					<div className="header-board">
-						<div className="board-set-icon">
-							<a href="/project/home">
-								<i className="fas fa-home"></i>
-							</a>
-						</div>
-						<h1 className="board-set-text">Project Name</h1>
-					</div>
-				</div>
+			<HeaderProject />
 				<div className="content-main">
 					<div className="main-board">
 						<div className="hide-filter">

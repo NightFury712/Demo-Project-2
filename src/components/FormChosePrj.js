@@ -14,7 +14,7 @@ const FormChosePrj = () => {
       </div>
       <div className="chose-project-content-primary">
         <ul className="data-list">
-          <ProjectListItem />
+          <ProjectListItem subUrl="add-issue"/>
         </ul>
       </div>
     </div>

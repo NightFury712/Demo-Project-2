@@ -3,7 +3,7 @@
   padding-right: 32px;
   display: flex;
   flex-direction: row;
-  width: 100%;
+  width: 95%;
 }
 
 .home-content-main {
@@ -34,7 +34,7 @@
 .home-content-sub {
   padding-left: 18px;
   height: 100%;
-  width: 30% ;
+  width: 34% ;
 }
 
 .title--fourth-content-sub {

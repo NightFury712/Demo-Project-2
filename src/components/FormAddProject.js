@@ -4,10 +4,7 @@ import { AddContext } from '../provider/AddContext';
 
 const FormAddProject = () => {
   const handler = useContext(AddContext);
-  const addProjectHandler = async () => {
-    const prjName = document.getElementById('AddProjectComplete_project.name').value;
-    const prjKey = document.getElementById('AddProjectComplete_project.key').value;
-
+  const postProject = async (prjName, prjKey) => {
     await fetch("http://localhost:5000/project/create", {
       method: 'POST',
       headers: {
@@ -21,6 +18,17 @@ const FormAddProject = () => {
     .then(res => res.json())
     .then(data => console.log(data))
     .catch(err => console.log(err))
+  }
+  const addProjectHandler = async () => {
+    const prjName = document.getElementById('AddProjectComplete_project.name').value;
+    const prjKey = document.getElementById('AddProjectComplete_project.key').value;
+    if(handler.listProject.find(item => item.project_Key === prjKey) !== undefined) {
+      alert('Project key is exited.\nPlease generate ney key!')
+    } else {
+      postProject(prjName, prjKey);
+      window.location.reload();
+    }
+    
   }
 
   return (
@@ -42,7 +50,7 @@ const FormAddProject = () => {
           <p className="form-element__description" id="projectKey_described">The project key is a unique identifier for a project. A short, concise key is recommended.<br></br> (e.g. Project name has project key BLG_2) Uppercase letters (A-Z), numbers (0-9) and underscore (_) can be used.</p>
         </div>
         <div className="_t-center">
-          <button type="submit" className="add-project-button-submit" onClick={addProjectHandler}>Submit</button>
+          <button type="button" className="add-project-button-submit" onClick={addProjectHandler}>Submit</button>
         </div>
       </form>
     </div>

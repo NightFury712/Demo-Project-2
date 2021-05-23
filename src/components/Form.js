@@ -1,5 +1,6 @@
 import React from "react";
 import "../css/Form.css";
+import HeaderProject from "../items/HeaderProject";
 
 const Form = ({ issue, setIssue }) => {
   const changeIssue = () => {
@@ -26,6 +27,7 @@ const Form = ({ issue, setIssue }) => {
 
   return (
     <React.Fragment>
+      <HeaderProject />
       <div className="full-form-setting">
         <h3 id="h3_1">Add Issue</h3>
         <form>

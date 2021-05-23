@@ -1,21 +1,13 @@
 import React from 'react'
 // import Issue from '../components/Issue'
 import '../css/Issues.css'
+import HeaderProject from '../items/HeaderProject';
 
 const Issues = ({issue}) => {
   return (
     <React.Fragment>
+    <HeaderProject />
     <div class="full-board">
-		<div class="wrap-header">
-			<div class="header-board">
-				<div class="board-set-icon">
-					<a href="/project/home">
-						<i class="fas fa-home"></i>
-					</a>
-				</div>
-				<h1 class="board-set-text">Project Name</h1>
-			</div>
-		</div>
         <div class="result-setting">
             <div class="title-group-condition">
                 <button type="button" class="search-condition-button">

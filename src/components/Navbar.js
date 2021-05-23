@@ -12,6 +12,7 @@ import { useState } from 'react'
 import Board from './Board'
 import ProjectSettings from './ProjectSettings'
 import Home from '../Views/Home'
+import UpdateIssue from '../Views/UpdateIssue'
 
 const Navbar = () => {
   const [issue, setIssue] = useState([]);
@@ -71,7 +72,10 @@ const Navbar = () => {
         <div className="nav-content">
           <Switch>
             <Route path="/project/:prjKey/add-issue">
-              <Form issue={issue} setIssue={setIssue} />
+              <Switch>
+                <Form issue={issue} setIssue={setIssue} path="/"/>
+                <UpdateIssue  path="/edit"/>
+              </Switch>
             </Route>
             <Route path="/project/:prjKey/issues">
               <Issues issue={issue} />

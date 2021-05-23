@@ -38,7 +38,7 @@ const Topbar = () => {
                 </div>
                 <div className="dropdown-box-content">
                   <ul className="data-list">
-                    <ProjectListItem />
+                    <ProjectListItem subUrl="home"/>
                   </ul>
                 </div>
               </div>

@@ -116,6 +116,7 @@
     margin-bottom: 8px;
 }
 
+
 .project-settings-checkboxLabel{
     font-size: 1rem;
     color: black;
@@ -170,6 +171,7 @@
 .project-settings-input-text1{
     margin-top: 30px;
     margin-bottom: 10px;
+    padding-left: 10px;
     border: 1px solid rgb(210, 210, 210);
     box-sizing: border-box;
     width: 95%;

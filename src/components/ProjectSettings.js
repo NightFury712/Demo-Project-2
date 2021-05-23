@@ -1,12 +1,12 @@
 import React from "react";
 import HeaderProject from "../items/HeaderProject";
 import "../css/ProjectSettings.css";
-import { Route, Switch, useRouteMatch } from "react-router";
+import { Route, Switch, useParams, useRouteMatch } from "react-router";
 import { Link } from "react-router-dom";
 
 const ProjectSettings = () => {
   const { path } = useRouteMatch();
-  console.log(path);
+  const { prjKey } = useParams();
   return (
     <React.Fragment>
       <div className="full-settings">
@@ -23,10 +23,10 @@ const ProjectSettings = () => {
 
                 <ul className="setting-nav-menu">
                   <li className="is_active">
-                    <Link to="/project/projectSettings">General</Link>
+                    <Link to={`/project/${prjKey}/projectSettings`}>General</Link>
                   </li>
                   <li className="is_active">
-                    <Link to="/project/projectSettings/members">Members</Link>
+                    <Link to={`/project/${prjKey}/projectSettings/members`}>Members</Link>
                   </li>
                 </ul>
               </li>
@@ -139,12 +139,12 @@ const ProjectSettings = () => {
 
                     <div className="card-default">
                       <div class="form-element-item">
-                        <input type="text" autocomplete="nop" className="project-settings-input-text1" placeholder="     Select user or team"></input>
+                        <input type="text" autoComplete="nop" className="project-settings-input-text1" placeholder="     Select user or team"></input>
                       </div>
 
                       <div class="form-element-item">
                         <label className="form-add-member-label">Add Member</label>
-                        <div className="form-element-item">
+                        <div className="form-element-item-email">
                           <div display="flex" color="#979797" class="css-1leaf8q">
                             <div class="form-add-email">Email Address</div>
                             <div class="form-add-role">Role</div>
