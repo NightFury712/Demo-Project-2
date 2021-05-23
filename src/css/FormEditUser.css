@@ -1,0 +1,116 @@
+.add-edit-user-form {
+    z-index: 900;
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    background-color: #fff;
+    width: 670px;
+    height: 450px;
+    box-shadow: 0 0 5px grey;
+  }
+  
+  .add-edit-user-form-display {
+    display: none;
+  }
+  
+  .edit-user-wrapper {
+    width: 100%;
+    float: none;
+    padding-top: 20px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  
+  .edit-user-title {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #6d94d4;
+    padding-left: 10px;
+  }
+  
+  
+  .form-element-edit-user__item .form-element-edit-user__label {
+    display: block;
+    white-space: nowrap;
+    margin-bottom: 10px;
+    color: #000;
+    height: 25px;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 20px;
+  }
+  
+  .add-editUser-input-text {
+    outline: none;
+    border: 1px solid #999;
+    width: 60%;
+    height: 24px;
+    border-radius: 4px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  
+  .add-editUser-input-text:focus {
+    transition: 0.2s;
+    background-color: #fcfade;
+  }
+  
+  .form-element-edit-user-settings .form-element-edit-user__item {
+    width: 90%;
+    font-size: 0.8rem;
+    color: gray;
+    margin-top: 15px;
+  }
+  
+  ._t-center-edit-user {
+    display: inline-block;
+    width: 90%;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .add-edit-user-button-submit {
+    border: none;
+    outline: none;
+    padding: 8px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 500;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #fff;
+    
+    border-color: #007bff;
+    background-color: #007bff;
+  }
+  
+  .add-edit-user-button-submit:hover {
+    
+    background-color: #002fff;
+  }
+  
+  .close-form-add-project {
+    width: 100%;
+    position: absolute;
+    text-align: right;
+    margin-bottom: 10px;
+  }
+  
+  .button-close-form-edit-user {
+    font-size: 1.5rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-top: 3px;
+    margin-right: 3px;
+    padding: 0 10px;
+    background-color: #dc3545;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .button-close-form-edit-user:hover {
+    background-color: #c70606;
+  }
