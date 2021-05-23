@@ -38,7 +38,7 @@ const Topbar = () => {
                 </div>
                 <div className="dropdown-box-content">
                   <ul className="data-list">
-                    <ProjectListItem subUrl="home"/>
+                    <ProjectListItem />
                   </ul>
                 </div>
               </div>
@@ -62,12 +62,23 @@ const Topbar = () => {
           </ul>
         </nav>
       </div>
-      <div>
-        <nav>
-          <ul>
-
-          </ul>
-        </nav>
+      <div class="header-right">
+        <div class="user-profile">
+            <button id="userProfileLink" class="dropdown-us-link">
+              <i class="fas fa-user-tie"></i>  
+            </button>
+            <ul class="dropdown-user" >
+              <li class="hi_name">
+                <span>Hello, Nguyen Manh Cuong</span>
+              </li>
+              <div class="personal-setting">
+                <button class="personal-edit">
+                  <span>Personal Setting</span>
+                </button>
+              </div>
+              
+            </ul>
+        </div>
       </div>
     </div>
   );
