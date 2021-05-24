@@ -2,8 +2,8 @@ table {
   border-spacing: 0;
 }
 
-th, td {
-  padding: 5px;
+td {
+  text-align: center;
 }
 
 .header-issue {
@@ -41,7 +41,24 @@ th, td {
 .filter-nav__link {
   border: none;
   font-size: 15px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  cursor: pointer;
 }
+
+.filter-nav__link:hover {
+  transition: 0.22s;
+  color: #fff;
+  background-color: #069b6e;
+}
+
+.filter-nav__link:focus {
+  transition: 0.22s;
+  color: #fff;
+  background-color: #55c0a2;
+}
+
+
 
 .box-filter1 {
   width: 200px;
@@ -70,73 +87,29 @@ th, td {
 .issue-table {
   margin-top: 50px;
   margin-left: 20px;
-  border: solid rgb(204, 203, 203);
-  border-radius: 10px;
+  border: 1px solid rgb(204, 203, 203);
   background-color: white;
 
 }
-
 
 .sort {
   background-color: white;
   margin-right: 30px;
   height: 50px;
-  font-size: 13px;
+  font-size: 15px;
   color: #069b6e;
   font-weight: 600;
 }
 
-#issueType, #issueStatus, #issuePriority, #issueCreated, #issueDuedate, #issueUpdate {
+#issueType, #issueKey, #issueSubject, #issueAssignee, #issueStatus, #issueRegister,
+#issuePriority, #issueCreated, #issueDuedate, #issueUpdate {
   width: 100px;
   text-align: center;
+  padding: 0 5px;
 }
 
-#issueKey {
-  width: 60px;
+.row-issueType,.row-issueKey, .row-issueSubject, .row-issueAssignee, .row-issueStatus, 
+.row-issuePriority, .row-issueCreated, .row-issueDueDate, .row-issueUpdate, .row-issueRegister {
+  font-size: 13px;
   text-align: center;
-}
-
-#issueSubject {
-  width: 210px;
-  text-align: center;
-}
-
-#issueAssignee {
-  width: 160px;
-  text-align: center;
-}
-
-#issueRegister {
-  width: 160px;
-  text-align: center;
-}
-
-.row-issueType, .row-issueStatus, .row-issuePriority, .row-issueCreated, .row-issueDueDate, .row-issueUpdate {
-  width: 100px;
-  text-align: center;
-  font-size: 12px;
-}
-
-.row-issueKey {
-  width: 60px;
-  text-align: center;
-  font-size: 12px;
-}
-
-.row-issueSubject {
-  width: 210px;
-  text-align: center;
-  font-size: 12px;
-}
-
-.row-issueAssignee {
-  width: 160px;
-  text-align: center;
-  font-size: 12px;
-}
-
-.row-issueRegister {
-  width: 160px;
-  text-align: center;
-  font-size: 12px;
 }

@@ -7,7 +7,7 @@
   height: 50px;
   border-bottom: 1px solid #BBB;
   text-align: center;
-  z-index: 900;
+  z-index: 90;
 }
 
 .top-nav {
@@ -97,6 +97,7 @@
 
 .top-nav-menu .top-nav-item .dropdown-box {
   position: absolute;
+  z-index: 95;
 
   top: 48px;
 
@@ -316,55 +317,78 @@
 }
 
 .user-profile {
-  margin-right: 5px;
   text-align: right;
   width: 100%;
 }
 
 
 .dropdown-us-link {
-  height: 40px;
-  width: 40px;
   background-color: #edf4f0;
+  float: right;
+  margin-top: 5px;
+  margin-right: 40px;
+  text-align: center;
+}
+
+.dropdown-us-buttton {
   border: none;
   cursor: pointer;
-  float: right;
+  color: #fff;
+  height: 40px;
+  width: 40px;
   border-radius: 50%;
-  
+  border: 1px solid #edf4f0;
+  background-color: #eaf181;
 }
 
-.dropdown-us-link:hover {
-  background-color: #e6ec8d;
-}
-
-.fa-user-tie {
+.dropdown-us-link .fa-user{
+  margin-right: 3px;
   text-align: right;
   font-size: 20px;
-  margin: 2px;
 }
 
+.dropdown-us-buttton:hover {
+  border: 1px solid #4cbd9b;
+  transition: all .3 ease-in-out;
+}
+
+
 .dropdown-user {
+  position: absolute;
   margin-right: 3px;
-  margin-top: 51px;
   background-color: white;
   padding: 5px;
   list-style: none;
   font-size: 12px;
-  text-align: left;
-  float: right;
+  text-align: center;
   width: 150px;
-  height: 49px;
+  height: 55px;
+  border-radius: 3px;
+  margin-top: 17px;
+  box-shadow: 0 0 5px grey;
+  margin-left: -90px;
+}
+
+.dropdown-user__name {
+  padding-top: 5px;
+  padding-bottom: 2px;
+}
+
+
+.dropdown-user .button-personal-edit {
+  cursor: pointer;
+  border: none;
+  background-color: #fff;
+  font-size: 13px;
+  padding: 7px 25px;
+}
+
+.button-personal-edit:hover {
+  background-color: #ccecdb;
+  transition: 0.22s;
   border-radius: 3px;
 }
 
-.personal-edit {
-  cursor: pointer;
-  border: none;
-  background-color: white;
-  margin-top: 10px;
-  font-size: 13px;
-}
-
-.personal-edit:hover {
-  background-color: #97d3b7;
+.dropdown-user-display {
+  display: none;
 }

@@ -1,10 +1,11 @@
-import React, {useContext} from 'react'
+import React from 'react'
+import '../css/FormEditUser.css'
 
 
 const FormEditUser = () => {
   
   return (
-    <div className="edit-user-wrapper">    
+    <div className="edit-user-wrapper add-edit-user-form-display">    
       <div className="edit-user-main">
         <h3 className="edit-user-title">
           <span>User Information</span>
@@ -28,7 +29,7 @@ const FormEditUser = () => {
           <input type="password" className="add-editUser-input-text -w-large" size="30" maxLength="25" required></input>
         </div>
         <div className="_t-center-edit-user">
-          <button type="submit" className="add-edit-user-button-submit" onClick={}>Submit</button>
+          <button type="submit" className="add-edit-user-button-submit">Submit</button>
         </div>
       </form>
     </div>

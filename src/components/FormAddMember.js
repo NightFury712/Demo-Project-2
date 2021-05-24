@@ -18,14 +18,13 @@ const FormAddMember = () => {
         name: name,
         prjKey: prjKey
       })
-
     })
       .then(res => res.json())
       .then(data => console.log(data))
       .catch(err => console.log(err))
   }
 
-  const handlerInvite = async () => {
+  const handlerInvite = () => {
     const emailInvite = document.querySelector('.input__field-email').value
     const prjKey = document.querySelector('.select__field-chose-project').value;
     if (handler.listUser.find(item => item.email === emailInvite) === undefined) {

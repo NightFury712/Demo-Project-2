@@ -84,7 +84,6 @@ export default function App() {
   }
 
   return (
-
     <AddContext.Provider value={
       {
         statePrj,
@@ -104,13 +103,11 @@ export default function App() {
       }}>
 
       <React.Fragment>
+        <div className={`dark-background-div ${formAdd ? '' : 'dark-background-div-display'}`}></div>
         <FormAdd />
         <Router>
           <Route path="/dashboard">
-            <React.Fragment>
-
               <Dashboard />
-            </React.Fragment>
           </Route>
           <Route path="/project/:prjKey">
             <Project />

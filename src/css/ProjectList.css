@@ -1,6 +1,8 @@
 .dashboard-contents-left {
   width: 100%;
   padding-right: 18px;
+  height: 550px;
+  overflow: auto;
 }
 
 .title-group-dashboard {

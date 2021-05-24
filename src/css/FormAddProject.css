@@ -1,5 +1,5 @@
 .add-project-form {
-  z-index: 900;
+  z-index: 100;
   position: absolute;
   display: block;
   top: 50%;
@@ -8,7 +8,7 @@
   background-color: #fff;
   width: 670px;
   height: 450px;
-  box-shadow: 0 0 5px grey;
+  box-shadow: 0 0 10px grey;
 }
 
 .add-project-form-display {
