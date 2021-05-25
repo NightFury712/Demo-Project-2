@@ -23,25 +23,6 @@ SET time_zone = "+00:00";
 
 -- --------------------------------------------------------
 
---
--- Cấu trúc bảng cho bảng `issues`
---
-
-CREATE TABLE `issues` (
-  `ID` int(3) NOT NULL,
-  `Title` varchar(100) NOT NULL,
-  `Description` varchar(200) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Đang đổ dữ liệu cho bảng `issues`
---
-
-INSERT INTO `issues` (`ID`, `Title`, `Description`) VALUES
-(1, 'My first issue', 'bug in code'),
-(2, 'My second issue', 'life is not like that you imagine'),
-(3, 'My third issue', 'it is really difficulty');
-
 -- --------------------------------------------------------
 
 --

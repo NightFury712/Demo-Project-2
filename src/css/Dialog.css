@@ -1,0 +1,241 @@
+@media screen {
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .full-dialog-setting {
+      overflow: auto;
+      transform: translate(215px,20px);
+      box-shadow: 0 0 5px grey;
+      display: flex;
+      flex-direction: column;
+      width: 65%;
+      background-color: #e5e5e5;
+      height: 600px;
+      padding-left: 50px;
+        
+    } 
+    
+    .content-header-dialog {
+      padding: 2px;
+      display: inline-flex;
+      white-space: normal;
+    }
+    .h2-dialog{
+      padding:2px;
+    }
+    .content-header-dialog-issue{
+      padding: 3px;
+    }
+    .h3-dialog{
+      padding: 3px;
+      margin: 2px;
+    }
+    
+    .img-dialog {
+      width: 30px;
+      height: 30px;
+      padding: 2px;
+    }
+    
+    td {
+      padding: 5px;
+      border-top: 1px solid #e5e5e5;
+    }
+    
+    .issue-type-dialog {
+      text-align: left;
+      text-decoration: none solid rgb(34, 34, 34);
+      font: 12px / 20px "Open Sans", Meiryo, メイリオ, Arial, sans-serif;
+      text-size-adjust: 80%;
+      border: 1px groove #b8b8b8;
+      width: 210px;
+      height: 25px;
+      margin-left: 10px;
+      margin-top:10px;
+      border-style: solid;
+    }
+    
+    textarea:focus,
+    select:focus {
+      outline: none;
+      background-color: blanchedalmond;
+      border-color: #34886f;
+      box-shadow: 0 0 5px #34886f;
+      transition: 0.2s;
+    }
+  
+    
+    .subject-dialog {
+      font: 11px / 20px "Open Sans", Meiryo, メイリオ, Arial, sans-serif;
+      border: 1px groove #b8b8b8;
+      margin-top: 10px;
+      height: 25px;
+      width: 90%;
+      margin-left: 10px;
+    }
+  
+    .issue-content-dialog {
+      border: 1px groove #f0f0f0;
+      background-color: white;
+      margin-top: 20px;
+      width: 90%;
+      height: 570px;
+    
+      text-align: center;
+      margin-left: 10px;
+    }
+    #textarea-dialog{
+      font: 12px / 20px "Open Sans", Meiryo, メイリオ, Arial, sans-serif;
+      width: 95%;
+      height: 200px;
+      padding:5px;
+      margin:10px;
+      
+    }
+    .table-dialog {
+      margin: 10px;
+      display: flex;
+      background-color: white;
+      width: 95%;
+    }
+    
+    .table-left-dialog {
+      width: 50%;
+      height: 250px;
+      display: flex;
+      flex-direction: row;
+      border-spacing: 10px;
+    }
+    
+    .table-righ-dialog {
+      width: 50%;
+      height: 250px;
+      display: flex;
+      flex-direction: row;
+      border-spacing: 10px;
+      margin-left: 50px;
+    }
+    
+    td {
+      padding: 5px;
+      border-top: 1px solid #e5e5e5;
+    }
+  
+    input:focus,  
+    select:focus {
+      outline: none;
+      background-color: blanchedalmond;
+      border-color: #34886f;
+      box-shadow: 0 0 5px #34886f;
+      transition: 0.2s;
+    }
+    
+    .status-dialog,
+    .priority-dialog,
+    .category-dialog,
+    #date-time-dialog,
+    .assignee-dialog,
+    .milestone-dialog,
+    .version-dialog {
+      border: 1px groove #b8b8b8;
+      text-decoration: none solid rgb(119, 119, 119);
+      text-size-adjust: 100%;
+      transform-origin: 73.0469px 19.5px;
+      font: 10px / 20px "Open Sans", Meiryo, メイリオ, Arial, sans-serif;
+      text-align: left;
+      width: 210px;
+      height: 25px;
+    }
+  
+    #table-element {
+      margin-left: 10px;
+      align-items: center;
+      block-size: 39px;
+      box-sizing: border-box;
+      color: rgb(119, 119, 119);
+      column-rule-color: rgb(119, 119, 119);
+      display: flex;
+      height: 39px;
+      text-decoration: none solid rgb(119, 119, 119);
+      text-size-adjust: 50%;
+      transform-origin: 73.0469px 19.5px;
+      width: 80px;
+      border: 0px none rgb(119, 119, 119);
+      flex: 0 1 30%;
+      font: 10px / 20px "Open Sans", Meiryo, メイリオ, Arial, sans-serif;
+      outline: rgb(119, 119, 119) none 0px;
+      padding: 10px 20px 9px 10px;
+    }
+  
+    .button-dialog {
+      margin-top: 20px;
+      padding-bottom: 40px;
+      width: 90%;
+      display: flex; 
+      justify-content:space-around ;
+    } 
+    .button-dialog__delete {
+      float: left;
+      margin-left: 10px;  
+    }
+  
+    .delete {
+      text-align:center;
+      background-color: #f2faf8;
+      border: solid 1px #2c9a7a;
+      border-radius: 1px;
+      color: black;
+      width: 90px;
+      height: 25px; 
+      cursor: pointer;
+      padding: 5px 10px;
+      margin-top: 10px;
+      margin-left: 10px;
+      font: 11px / 20px "Open Sans", Meiryo, メイリオ, Arial, sans-serif;
+    }
+    .button-dialog__back__save{
+      display: flex; 
+      justify-content: flex-end;
+      margin-left: 480px;
+    }
+    .save { 
+      text-align:center;
+      background-color: #2c9a7a;
+      border: solid 1px #2c9a7a;
+      border-radius: 1px;
+      color: white;
+      width: 80px;
+      height: 25px;
+      cursor: pointer;
+      padding: 5px 10px;
+      margin-top: 10px;
+      margin-left: 5px;
+      font: 11px / 20px "Open Sans", Meiryo, メイリオ, Arial, sans-serif;
+     
+    }
+  
+    .save:hover {
+      background-color: #35ac88;
+    }
+    
+    .back {
+      text-align:center;
+      background-color: #f2faf8;
+      border: solid 1px #2c9a7a;
+      border-radius: 1px;
+      color: black;
+      width: 80px;
+      height: 25px;
+      cursor: pointer;
+      padding: 5px 10px;
+      margin-top: 10px;
+      margin-right: 5px;
+      font: 11px / 20px "Open Sans", Meiryo, メイリオ, Arial, sans-serif;
+    }
+    
+    .back:hover {
+      background-color: whitesmoke;
+    }
+    
+  }
