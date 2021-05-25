@@ -15,7 +15,6 @@ const Form = () => {
       },
       body: JSON.stringify({
         type: document.querySelector(".issue-type").value,
-        id: Math.random() * 1000,
         subject: document.querySelector(".subject").value,
         description: document.querySelector("#textarea").value,
         status: "Open",
@@ -47,8 +46,8 @@ const Form = () => {
         <h3 id="h3_1">Add Issue</h3>
         <form>
           <select name="issue-type" className="issue-type">
-            <option value="task">Task</option>
-            <option value="bug">Bug</option>
+            <option value="Task">Task</option>
+            <option value="Bug">Bug</option>
             <option value="Request">Request</option>
             <option value="Other">Other</option>
           </select>
@@ -80,9 +79,9 @@ const Form = () => {
                   <td id="label_1">Priority</td>
                   <td>
                     <select className="priority">
-                      <option value="high">High</option>
-                      <option value="normal">Normal</option>
-                      <option value="low">Low</option>
+                      <option value="High">High</option>
+                      <option value="Normal">Normal</option>
+                      <option value="Low">Low</option>
                     </select>
                   </td>
                 </tr>

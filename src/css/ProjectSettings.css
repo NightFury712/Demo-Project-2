@@ -354,3 +354,21 @@
 .delete-project-member:hover {
     color: grey;
 }
+
+._t-center-delete {
+    text-align: right;
+}
+
+.project-settings-button1-delete {
+    border: 1px solid grey;
+    outline: none;
+    background-color: #DDD;
+    cursor: pointer;
+    padding: 7px 12px;
+    border-radius: 2px;
+}
+
+.project-settings-button1-delete:hover {
+    transition: 0.22s;
+    background-color: #f0f0f0;
+}

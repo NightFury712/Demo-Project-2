@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import HeaderProject from '../items/HeaderProject'
 import StreamUpDateItem from '../items/StreamUpdateItem'
 import '../css/Home.css'
+import { ProjectContext } from '../provider/ProjectContext'
 
 const Home = () => {
-  
+  const data = useContext(ProjectContext);
+
   return (
     <div className="content-outer">
       <HeaderProject />
@@ -34,24 +36,35 @@ const Home = () => {
           <div className="card card-default-content-sub">
             <div className="graph-bar-full">
               <div className="graph-bar__fig">
-                <div class="graph--bar__fig-bar status--1"></div>
+                <div class="graph--bar__fig-bar status--1" style={{width: `${data.listIssues.filter(item => item.status === 'Open').length / data.listIssues.length * 100}%`}}></div>
+                <div class="graph--bar__fig-bar status--2" style={{width: `${data.listIssues.filter(item => item.status === 'In Progress').length / data.listIssues.length * 100}%`}}></div>
+                <div class="graph--bar__fig-bar status--3" style={{width: `${data.listIssues.filter(item => item.status === 'Resolved').length / data.listIssues.length * 100}%`}}></div>
+                <div class="graph--bar__fig-bar status--4" style={{width: `${data.listIssues.filter(item => item.status === 'Closed').length / data.listIssues.length * 100}%`}}></div>
               </div>
               <div className="graph-bar__info">
                 <div className="graph-bar__info-wrapper">
                   <div className="graph-bar__info-wrapper-title">Open</div>
-                  <div className="graph-bar__info-wrapper-content info-content--1">1</div>
+                  <div className="graph-bar__info-wrapper-content info-content--1">
+                    {data.listIssues.filter(item => item.status === 'Open').length}
+                  </div>
                 </div>
                 <div className="graph-bar__info-wrapper">
                   <div className="graph-bar__info-wrapper-title">In progess</div>
-                  <div className="graph-bar__info-wrapper-content info-content--2">2</div>
+                  <div className="graph-bar__info-wrapper-content info-content--2">
+                    {data.listIssues.filter(item => item.status === 'In progess').length}
+                  </div>
                 </div>
                 <div className="graph-bar__info-wrapper">
-                  <div className="graph-bar__info-wrapper-title">Resolve</div>
-                  <div className="graph-bar__info-wrapper-content info-content--3">3</div>
+                  <div className="graph-bar__info-wrapper-title">Resolved</div>
+                  <div className="graph-bar__info-wrapper-content info-content--3">
+                    {data.listIssues.filter(item => item.status === 'Resolved').length}
+                  </div>
                 </div>
                 <div className="graph-bar__info-wrapper">
                   <div className="graph-bar__info-wrapper-title">Closed</div>
-                  <div className="graph-bar__info-wrapper-content info-content--4">4</div>
+                  <div className="graph-bar__info-wrapper-content info-content--4">
+                    {data.listIssues.filter(item => item.status === 'Closed').length}
+                  </div>
                 </div>
               </div>
             </div>

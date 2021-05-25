@@ -11,6 +11,57 @@ const ProjectSettings = () => {
   const handler = useContext(AddContext);
   const { prjKey } = useParams();
   const data = useContext(ProjectContext);
+  const deletePrjHandler = () => {
+    const flag = window.confirm(`Delete this project imediately?`)
+    if (flag === true) {
+      const deletePrj = async () => {
+        await fetch("http://localhost:5000/project/delete", {
+          method: 'delete',
+          headers: {
+            'Content-type': 'application/json'
+          },
+          body: JSON.stringify({
+            prjKey: prjKey.split('+')[1]
+          })
+        })
+          .then(res => res.json())
+          .then(data => console.log(data))
+          .catch(err => console.log(err))
+      }
+      deletePrj();
+      window.location.href = '/dashboard';
+    }
+  }
+
+  const updatePtjHandler = () => {
+    const newName = document.getElementById('projectName').value;
+    if (newName === prjKey.split('+')[0]) {
+      alert('Please enter a new name for this project!')
+    } else {
+      const flag = window.confirm(`Rename this project to '${newName}'`)
+      if (flag === true) {
+        const updatePrj = async () => {
+          await fetch("http://localhost:5000/project/update", {
+            method: 'PUT',
+            headers: {
+              'Content-type': 'application/json'
+            },
+            body: JSON.stringify({
+              prjName: newName,
+              prjKey: prjKey.split('+')[1]
+            })
+          })
+            .then(res => res.json())
+            .then(data => console.log(data))
+            .catch(err => console.log(err))
+        }
+        updatePrj();
+        window.location.href = '/dashboard';
+      }
+    }
+
+  }
+
   const addMember = async (emailInvite) => {
     const name = handler.listUser.find(item => item.email === emailInvite).name;
     const role = document.querySelector('.form-element-item-filter2').value;
@@ -129,6 +180,9 @@ const ProjectSettings = () => {
               <Route exact path="/project/:prjKey/projectSettings">
                 <div className="project-settings-content-main-background">
                   <div className="project-settings-content-main">
+                    <div className="_t-center-delete">
+                      <button type="button" id="EditProjectComplete_null" className="project-settings-button1-delete" onClick={deletePrjHandler}>Delete Project</button>
+                    </div>
                     <fieldset>
                       <legend>
                         <h3 className="project-settings-settings-title">General</h3>
@@ -161,7 +215,7 @@ const ProjectSettings = () => {
                       </div>
                     </fieldset>
                     <div className="_t-center">
-                      <button type="button" id="EditProjectComplete_null" className="project-settings-button1 _t-center-updateprj">Submit</button>
+                      <button type="button" id="EditProjectComplete_null" className="project-settings-button1 _t-center-updateprj" onClick={updatePtjHandler}>Submit</button>
                     </div>
                   </div>
                 </div>

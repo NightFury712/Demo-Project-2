@@ -4,6 +4,31 @@
     width: 100%;
 }
 
+.board-content-main {
+    display: flex;
+    flex-direction: row;
+    height: 70px;
+    width: 100%;margin-top: 30px;
+}
+
+.board-content-icon {
+    margin-left: 25px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #999;
+    border: 1px solid grey;
+    box-shadow: 0 0 2px grey;
+    text-align: center;
+}
+
+.board-content-icon .fa-chart-bar {
+    font-size: 20px;
+    padding-top: 10px;
+    padding-left: 4px;
+}
+
 .wrap-header {
     background-color: white;
     height: 49px;
@@ -78,6 +103,9 @@
 
 .name-board {
     margin-top: 5px;
+    margin-left: 15px;
+    font-size: 22px;
+    border-bottom: 5px solid #4cbd9b;
 }
 
 .dot-red {
@@ -120,17 +148,14 @@
     display: flex;
     flex-direction: row;
     margin-left: 25px;
+    width: 100%;
 }
 
-.board {
-    width: 300px;
-}
-
-.status {
+.board-management-status {
     display: flex;
     flex-direction: row;
-    margin-top: 20px;
-    margin-left: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
 }
 
 .number-open, .number-inprogress, .number-resolved, .number-closed {
@@ -161,38 +186,27 @@
     list-style: none;
 }
 
-.brief-issue {
-    border: 0.5px solid gainsboro;
-    border-radius: 5px;
-}
-
-.name-issue {
-    margin-left: 15px;
-    color: rgb(5, 128, 3);
-    text-decoration: none;
-}
-
 .typeOfIssue {
     margin-left: 10px;
-    margin-top: 5px;
     border: 0.5px;
     border-radius: 2px;
     background-color: rgb(98, 153, 17);
-    font-weight: 600;
     color: rgb(255, 249, 249);
     text-align: center;
-    font-size: 10px;
+    font-size: 12px;
+    padding: 2px 15px;
+    border-radius: 20px;
 }
 
 .project-name {
-    margin-left: 15px;
+    margin-left: 3px;
     font-size: 14px;
     font-weight: 500;
 }
 
 .due-date {
-    margin-left: 15px;
-    font-size: 12px;
+    margin-left: 3px;
+    font-size: 13px;
     color: red;
     font-weight: 600;
 }
@@ -205,4 +219,57 @@
 .header-board .board-set-content .board-project-key {
     margin-top: 12px;
     padding-left: 5px;
+}
+
+.board {
+    width: 20%;
+    margin-right: 20px;
+}
+
+.board-status-list {
+    list-style: none;
+    /* width: 280px; */
+    height: 440px;
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: auto;
+}
+
+.board-status-list__wrapper {
+    padding: 15px;
+}
+
+.brief-issue-content {
+    width: 100%;
+    float: left;
+    padding: 5px;
+    border: 1px solid #BBB;
+    border-radius: 3px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.brief-issue-content:hover {
+    transition: 0.22s;
+    box-shadow: 0 0 4px grey;
+}
+
+.card-issue-title {
+    text-align: left;
+}
+
+.name-issue {
+    color: rgb(5, 128, 3);
+    padding-left: 3px;
+    font-size: 15px;
+}
+
+.card-issue-type {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.card-issue-due-date {
+    text-align: left;
 }

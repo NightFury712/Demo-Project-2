@@ -56,7 +56,8 @@
 
 .graph-bar-full .graph-bar__fig {
   font-size: 0;
-  display: inline-block;
+  display: flex;
+  flex-direction: row;
   vertical-align: middle;
   width: 100%;
   height: 16px;
@@ -64,9 +65,23 @@
 }
 
 .graph-bar-full .graph-bar__fig .status--1 {
-  width: 100%;
   height: 16px;
   background-color: #ed8077;
+}
+
+.graph-bar-full .graph-bar__fig .status--2{
+  height: 16px;
+  background-color: #4488c5;
+}
+
+.graph-bar-full .graph-bar__fig .status--3 {
+  height: 16px;
+  background-color: #5eb5a6;
+}
+
+.graph-bar-full .graph-bar__fig .status--4 {
+  height: 16px;
+  background-color: #a1af2f;
 }
 
 .graph-bar-full .graph-bar__info {

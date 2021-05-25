@@ -12,7 +12,7 @@ const StreamUpdateItem = () => {
             <div className="stream-update__content">
               <div className="stream-update__title">
                 <span className="stream-update__text">
-                  <span className="stream-update__username">Hoang Hai Danh </span>
+                  <span className="stream-update__username">Hoang Hai Dang </span>
                     add a new
                     <span className="Action-Addissue">issue</span>
                   </span>

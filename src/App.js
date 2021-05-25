@@ -21,7 +21,6 @@ export default function App() {
   const [formAddMember, setFormAddMember] = useState(false);
   const [stateRecent, setStateRecent] = useState(true);
   const [statePrj, setStatePrj] = useState(true);
-
   const [listProject, setListProject] = useState([]);
   const [listUser, setListUser] = useState([]);
 
@@ -45,6 +44,7 @@ export default function App() {
     getlistPrj();
     getlistUser();
   }, [])
+
   const changestatePrj = () => {
     setStatePrj(!statePrj);
     setStateRecent(true);
