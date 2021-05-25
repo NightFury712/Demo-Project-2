@@ -1,14 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
+import { useParams } from "react-router";
 import "../css/Form.css";
 import HeaderProject from "../items/HeaderProject";
+import { ProjectContext } from "../provider/ProjectContext";
 
-const Form = ({ issue, setIssue }) => {
-  const changeIssue = () => {
-    var date = new Date();
-    // console.log(document.querySelector('.subject').value);
-    setIssue([
-      ...issue,
-      {
+const Form = () => {
+  const { prjKey } = useParams();
+  const data = useContext(ProjectContext);
+  const postIssue = async () => {
+    await fetch("http://localhost:5000/issue/create", {
+      method: 'POST',
+      headers: {
+        'Content-type': 'application/json'
+      },
+      body: JSON.stringify({
         type: document.querySelector(".issue-type").value,
         id: Math.random() * 1000,
         subject: document.querySelector(".subject").value,
@@ -17,12 +22,22 @@ const Form = ({ issue, setIssue }) => {
         priority: document.querySelector(".priority").value,
         category: document.querySelector(".category").value,
         dueDate: document.querySelector("#date-time").value,
-        created: date.toUTCString(),
+        created: new Date().toUTCString(),
         assignee: document.querySelector(".assignee").value,
         milestone: document.querySelector(".milestone").value,
         version: document.querySelector(".version").value,
-      },
-    ]);
+        prjKey: prjKey.split('+')[1]
+      })
+    })
+      .then(res => res.json())
+      .then(data => console.log(data))
+      .catch(err => console.log(err))
+  }
+
+  const postIssueHandler = async () => {
+    postIssue();
+    alert("Add Issue sucess!");
+    window.location.href = `/project/${prjKey}/issues`
   };
 
   return (
@@ -99,9 +114,9 @@ const Form = ({ issue, setIssue }) => {
                   <td id="label_1">Assignee</td>
                   <td>
                     <select className="assignee">
-                      <option value="me">Me</option>
-                      <option value="you">You</option>
-                      <option value="we">We</option>
+                      {data.listMembers.map(item => {
+                        return <option key={item.id} value={item.name}>{item.name}</option>
+                      })}
                     </select>
                   </td>
                 </tr>
@@ -131,8 +146,7 @@ const Form = ({ issue, setIssue }) => {
         </div>
         <div className="submit">
           <div className="submit-button">
-            <button className="preview">Preview</button>
-            <button className="add" onClick={changeIssue}>Add
+            <button className="add" onClick={postIssueHandler}>Add
           </button>
           </div>
         </div>

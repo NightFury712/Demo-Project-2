@@ -1,8 +1,9 @@
 .dashboard-contents-right {
   width: 100%;
   padding-left: 18px;
-  height: 500px;
+  height: 550px;
   float: right;
+  overflow: auto;
 }
 
 ._plain-button-timeline {

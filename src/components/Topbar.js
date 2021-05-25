@@ -1,10 +1,15 @@
-import React, {useContext} from 'react'
+import React, { useContext, useState } from 'react'
 import '../css/Topbar.css'
 import ProjectListItem from '../items/ProjectListItem'
 import { AddContext } from '../provider/AddContext'
 
 const Topbar = () => {
   const handler = useContext(AddContext);
+  const [dropdownUser, setDropdownUser] = useState(false);
+
+  const handerDropdownUser = () => {
+    setDropdownUser(!dropdownUser)
+  }
 
   // const changeFormAddIssue = () => {
   //   window.location.href = '/project/add-issue'
@@ -38,7 +43,7 @@ const Topbar = () => {
                 </div>
                 <div className="dropdown-box-content">
                   <ul className="data-list">
-                    <ProjectListItem />
+                    <ProjectListItem subUrl="home"/>
                   </ul>
                 </div>
               </div>
@@ -64,20 +69,22 @@ const Topbar = () => {
       </div>
       <div class="header-right">
         <div class="user-profile">
-            <button id="userProfileLink" class="dropdown-us-link">
-              <i class="fas fa-user-tie"></i>  
+          <div class="dropdown-us-link">
+            <button id="userProfileLink" class="dropdown-us-buttton" onClick={handerDropdownUser}>
+              <i class="far fa-user"></i>
             </button>
-            <ul class="dropdown-user" >
-              <li class="hi_name">
+            <ul class={`dropdown-user ${dropdownUser ? '' : 'dropdown-user-display'}`}>
+              <li class="dropdown-user__name">
                 <span>Hello, Nguyen Manh Cuong</span>
               </li>
               <div class="personal-setting">
-                <button class="personal-edit">
+                <button class="button-personal-edit">
                   <span>Personal Setting</span>
                 </button>
               </div>
-              
             </ul>
+          </div>
+
         </div>
       </div>
     </div>

@@ -8,7 +8,7 @@ const Issue = ({issue}) => {
           <span class="row-issueType">{issue.type}</span>
         </td>
         <td>
-          <span class="row-issueKey">123456-1</span>
+          <span class="row-issueKey">{issue.id}</span>
         </td>
         <td>
           <span class="row-issueSubject">{issue.subject}</span>
@@ -17,7 +17,7 @@ const Issue = ({issue}) => {
           <span class="row-issueAssignee">{issue.assignee}</span>
         </td>
         <td>
-          <span class="row-issueStatus">Open</span>
+          <span class="row-issueStatus">{issue.status}</span>
         </td>
         <td>
           <span class="row-issuePriority">{issue.priority}</span>
@@ -29,10 +29,10 @@ const Issue = ({issue}) => {
           <span class="row-issueDueDate">{issue.dueDate}</span>
         </td>
         <td>
-          <span class="row-issueUpdate">15:30</span>
+          <span class="row-issueUpdate">{issue.created}</span>
         </td>
         <td>
-          <span class="row-issueRegister">Dang</span>
+          <span class="row-issueRegister">Dang Hoang</span>
         </td>
       </tr>
     </React.Fragment>

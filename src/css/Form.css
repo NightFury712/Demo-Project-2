@@ -7,6 +7,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  padding-bottom: 100px;
 }
 #h3_1 {
   margin-left: 33px;
@@ -59,6 +60,7 @@ select:focus {
   height: 32px;
   width: 82.5%;
   margin-left: 33px;
+  padding-left: 10px;
 }
 
 .table {
@@ -94,6 +96,7 @@ td {
   text-align: left;
 }
 
+
 .status,
 .priority,
 .category,
@@ -110,7 +113,21 @@ td {
   width: 210px;
   height: 35px;
   margin-left: auto;
+  padding-left: 5px;
 }
+
+#date-time, .assignee, .priority {
+  border: 1px groove #b8b8b8;
+  text-decoration: none solid rgb(119, 119, 119);
+  text-size-adjust: 100%;
+  transform-origin: 73.0469px 19.5px;
+  font: 13px / 20px "Open Sans", Meiryo, メイリオ, Arial, sans-serif;
+  text-align: left;
+  width: 210px;
+  height: 35px;
+  margin-left: auto;
+}
+
 
 .submit {
   margin-left: 40px;
@@ -128,7 +145,7 @@ td {
   height: 30px;
   cursor: pointer;
   padding: 5px 10px;
-  margin-top: 20px;
+  margin-top: 50px;
   margin-left: 5px;
  
 }

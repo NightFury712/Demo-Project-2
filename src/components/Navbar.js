@@ -8,15 +8,12 @@ import {
   useParams
 } from "react-router-dom";
 import Issues from '../Views/Issues';
-import { useState } from 'react'
-import Board from './Board'
+import Board from '../Views/Board'
 import ProjectSettings from './ProjectSettings'
 import Home from '../Views/Home'
-import UpdateIssue from '../Views/UpdateIssue'
 
 const Navbar = () => {
-  const [issue, setIssue] = useState([]);
-  const {prjKey} = useParams();
+  const { prjKey } = useParams();
   return (
     <Router>
       <div className="main-content">
@@ -27,7 +24,7 @@ const Navbar = () => {
           <span className="nav-link">
             <NavLink activeClassName="actived" className="link" to={`/project/${prjKey}/home`}>
               <span className="link-content">
-              <i className="fas fa-home"></i>
+                <i className="fas fa-home"></i>
                 <span className="link-span"> Home</span>
               </span>
             </NavLink>
@@ -35,7 +32,7 @@ const Navbar = () => {
           <span className="nav-link">
             <NavLink activeClassName="actived" className="link" to={`/project/${prjKey}/add-issue`}>
               <span className="link-content">
-              <i className="fas fa-plus"></i>
+                <i className="fas fa-plus"></i>
                 <span className="link-span"> Add Issues</span>
               </span>
             </NavLink>
@@ -43,7 +40,7 @@ const Navbar = () => {
           <span className="nav-link">
             <NavLink activeClassName="actived" className="link" to={`/project/${prjKey}/issues`}>
               <span className="link-content">
-              <i className="far fa-list-alt"></i>
+                <i className="far fa-list-alt"></i>
                 <span className="link-span"> Issues</span>
               </span>
             </NavLink>
@@ -51,7 +48,7 @@ const Navbar = () => {
           <span className="nav-link">
             <NavLink activeClassName="actived" className="link" to={`/project/${prjKey}/board`}>
               <span className="link-content">
-              <i className="fas fa-chart-bar"></i>
+                <i className="fas fa-chart-bar"></i>
                 <span className="link-span"> Board</span>
               </span>
             </NavLink>
@@ -59,7 +56,7 @@ const Navbar = () => {
           <span className="nav-link">
             <NavLink activeClassName="actived" className="link" to={`/project/${prjKey}/projectSettings`}>
               <span className="link-content">
-              <i class="fas fa-cog"></i>
+                <i class="fas fa-cog"></i>
                 <span className="link-span"> Project Settings</span>
               </span>
             </NavLink>
@@ -72,13 +69,10 @@ const Navbar = () => {
         <div className="nav-content">
           <Switch>
             <Route path="/project/:prjKey/add-issue">
-              <Switch>
-                <Form issue={issue} setIssue={setIssue} path="/"/>
-                <UpdateIssue  path="/edit"/>
-              </Switch>
+              <Form />
             </Route>
             <Route path="/project/:prjKey/issues">
-              <Issues issue={issue} />
+              <Issues />
             </Route>
             <Route path="/project/:prjKey/home">
               <Home />
