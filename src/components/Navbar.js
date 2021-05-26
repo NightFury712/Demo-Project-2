@@ -19,7 +19,7 @@ const Navbar = () => {
       <div className="main-content">
         <nav className="nav">
           <div className="logo">
-            <label>Bug tracking</label>
+            <label className="logo-label">Bug tracking</label>
           </div>
           <span className="nav-link">
             <NavLink activeClassName="actived" className="link" to={`/project/${prjKey}/home`}>

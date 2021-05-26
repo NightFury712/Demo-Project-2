@@ -11,6 +11,9 @@ import { useState, useEffect } from 'react'
 import React from "react";
 import FormAdd from './components/FormAdd'
 import { AddContext } from './provider/AddContext'
+import FormLogin from './FormLogin/FormLogin';
+import FormSignup from './FormLogin/FormSignup'
+import { ProtectedRoute } from './router/protectedRouter';
 // import axios from 'axios'
 
 
@@ -24,6 +27,8 @@ export default function App() {
   const [listProject, setListProject] = useState([]);
   const [listUser, setListUser] = useState([]);
   const [timeline, setTimeLine] = useState([]);
+  const [accessToken, setAccessToken] = useState({})
+  const [auth, setAuth] = useState(false)
 
   useEffect(() => {
     const getlistPrj = () => {
@@ -53,6 +58,7 @@ export default function App() {
     getlistPrj();
     getlistUser();
     getTimeLine();
+    console.log(accessToken);
   }, [])
 
   const changestatePrj = () => {
@@ -94,38 +100,39 @@ export default function App() {
   }
 
   return (
-    <AddContext.Provider value={
-      {
-        statePrj,
-        stateRecent,
-        formAdd,
-        formAddIssue,
-        formAddMember,
-        formAddPrj,
-        listProject,
-        listUser,
-        timeline,
-        changeFormAdd,
-        changeFormAddIssue,
-        changeFormAddMember,
-        changeFormAddPrj,
-        changestatePrj,
-        changeStateRecent
-      }}>
-
-      <React.Fragment>
+    <React.Fragment>
+      <AddContext.Provider value={
+        {
+          statePrj,
+          stateRecent,
+          formAdd,
+          formAddIssue,
+          formAddMember,
+          formAddPrj,
+          listProject,
+          listUser,
+          timeline,
+          accessToken,
+          auth,
+          setAuth,
+          setAccessToken,
+          changeFormAdd,
+          changeFormAddIssue,
+          changeFormAddMember,
+          changeFormAddPrj,
+          changestatePrj,
+          changeStateRecent
+        }}>
         <div className={`dark-background-div ${formAdd ? '' : 'dark-background-div-display'}`}></div>
         <FormAdd />
         <Router>
-          <Route path="/dashboard">
-              <Dashboard />
-          </Route>
-          <Route path="/project/:prjKey">
-            <Project />
-          </Route>
+          <Route path="/dashboard" component={Dashboard} />
+          <Route path="/project/:prjKey" component={Project} />
+          <Route exact path="/login" component={FormLogin} />
+          <Route exact path="/register" component={FormSignup} />
         </Router>
-      </React.Fragment>
-    </AddContext.Provider>
+      </AddContext.Provider>
+    </React.Fragment>
   );
 }
 

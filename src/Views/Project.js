@@ -49,25 +49,25 @@ const Project = () => {
   }, [])
 
   return (
-    <ProjectContext.Provider value={{
-      listIssues,
-      issueFilter,
-      listMembers,
-      showDialog,
-      issueSelect,
-      subTimeline,
-      setIssueSelect,
-      showDialogHandler,
-      setIssueFilter,
-      setListMembers
-    }}>
-      <React.Fragment>
-        <div className={`dark-background-div ${ showDialog ? '' : 'dark-background-div-display'}`}></div>
+    <React.Fragment>
+      <ProjectContext.Provider value={{
+        listIssues,
+        issueFilter,
+        listMembers,
+        showDialog,
+        issueSelect,
+        subTimeline,
+        setIssueSelect,
+        showDialogHandler,
+        setIssueFilter,
+        setListMembers
+      }}>
+        <div className={`dark-background-div ${showDialog ? '' : 'dark-background-div-display'}`}></div>
         <Dialog />
         <Topbar />
         <Navbar />
-      </React.Fragment>
-    </ProjectContext.Provider>
+      </ProjectContext.Provider>
+    </React.Fragment>
   );
 }
 
