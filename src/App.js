@@ -23,6 +23,7 @@ export default function App() {
   const [statePrj, setStatePrj] = useState(true);
   const [listProject, setListProject] = useState([]);
   const [listUser, setListUser] = useState([]);
+  const [timeline, setTimeLine] = useState([]);
 
   useEffect(() => {
     const getlistPrj = () => {
@@ -41,8 +42,17 @@ export default function App() {
         })
         .catch(err => console.log(err))
     }
+    const getTimeLine = () => {
+      fetch("http://localhost:5000/timeline/getAll")
+        .then(res => res.json())
+        .then(data => {
+          setTimeLine(data);
+        })
+        .catch(err => console.log(err))
+    }
     getlistPrj();
     getlistUser();
+    getTimeLine();
   }, [])
 
   const changestatePrj = () => {
@@ -94,6 +104,7 @@ export default function App() {
         formAddPrj,
         listProject,
         listUser,
+        timeline,
         changeFormAdd,
         changeFormAddIssue,
         changeFormAddMember,

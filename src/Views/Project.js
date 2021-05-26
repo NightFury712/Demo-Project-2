@@ -10,6 +10,7 @@ const Project = () => {
   const [listMembers, setListMembers] = useState([]);
   const [issueFilter, setIssueFilter] = useState([]);
   const [issueSelect, setIssueSelect] = useState([]);
+  const [subTimeline, setSubTimeline] = useState([]);
   const [showDialog, setShowDialog] = useState(false);
   const { prjKey } = useParams();
 
@@ -18,7 +19,7 @@ const Project = () => {
   }
   useEffect(() => {
     const getDataIssue = async () => {
-      fetch(`http://localhost:5000/issue/getAll/${prjKey.split('+')[1]}`)
+      await fetch(`http://localhost:5000/issue/getAll/${prjKey.split('+')[1]}`)
         .then(res => res.json())
         .then(data => {
           setListIssues(data);
@@ -27,13 +28,22 @@ const Project = () => {
         .catch(err => console.log(err));
     }
     const getDataMember = async () => {
-      fetch(`http://localhost:5000/member/getAll/${prjKey.split('+')[1]}`)
+      await fetch(`http://localhost:5000/member/getAll/${prjKey.split('+')[1]}`)
         .then(res => res.json())
         .then(data => {
           setListMembers(data);
         })
         .catch(err => console.log(err));
     }
+    const getSubTimeline = async () => {
+      await fetch(`http://localhost:5000/timeline/getAll`)
+        .then(res => res.json())
+        .then(data => {
+          setSubTimeline(data);
+        })
+        .catch(err => console.log(err));
+    }
+    getSubTimeline();
     getDataMember();
     getDataIssue();
   }, [])
@@ -45,6 +55,7 @@ const Project = () => {
       listMembers,
       showDialog,
       issueSelect,
+      subTimeline,
       setIssueSelect,
       showDialogHandler,
       setIssueFilter,

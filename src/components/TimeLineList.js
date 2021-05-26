@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 
 import '../css/TimeLineList.css'
 import StreamUpdateItem from '../items/StreamUpdateItem'
+import { AddContext } from '../provider/AddContext'
 
 const TimeLineList = ({ arrowTL, changeArrowTL }) => {
+  const handler = useContext(AddContext);
   return (
     <React.Fragment>
       <div className="dashboard-contents-right">
@@ -24,7 +26,11 @@ const TimeLineList = ({ arrowTL, changeArrowTL }) => {
             <div className={`timeline-content ${arrowTL ? 'is_opened-project-list' : ''}`}>
               <div className="timeline">
                 <ul className="timeline__stream">
-                  <StreamUpdateItem />
+                  {
+                    handler.timeline.map(item => {
+                      return <StreamUpdateItem key={item.id} item={item}/>
+                    })
+                  }
                 </ul>
               </div>
             </div>

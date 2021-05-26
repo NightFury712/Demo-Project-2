@@ -51,26 +51,25 @@
   flex-direction: row;
   padding-top: 15px;
   padding-bottom: 15px;
-  padding-left: 30px;
+  padding-left: 15px;
   line-height: 1.8rem;
-  word-wrap: break-word;
 }
 
 .stream-update__icon {
-  /* margin-top: -5px; */
-  background-color: #fff;
-  height: 50px;
-  width: 50px;
+  margin-top: 5px;
+  height: 45px;
+  width: 45px;
   border-radius: 50%;
   text-align: center;
+  background-color: #eaf181;
 }
 
-.stream-update__icon .fa-building{
-  padding-right: 7px;
+.stream-update__icon .fa-user {
+  padding-left: 2px;
   position: relative;
   top: calc(50% - 15px);
-  font-size: 35px;
-  color: #cccccc;
+  font-size: 27px;
+  color: #fff;
 }
 
 .stream-update__tilte {
@@ -78,7 +77,7 @@
 }
 
 .stream-update__content {
-  width: 100%;
+  width: 87%;
   padding-left: 10px;
 }
 
@@ -87,14 +86,11 @@
   vertical-align: middle;
   color: #fff;
   font-size: 0.9rem;
-  line-height: 1.7rem;
   font-weight: 400;
-  margin-left: 4px;
+  margin-left: 10px;
   margin-right: 4px;
   border-radius: 20px;
-  display: inline-block;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 2px 10px;
 }
 
 .stream-update__content .stream-update__meta {

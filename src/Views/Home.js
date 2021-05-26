@@ -25,7 +25,11 @@ const Home = () => {
           </div>
           <div id="timeline">
             <div className="timeline">
-              <StreamUpDateItem />
+              {
+                data.subTimeline.map(item => {
+                  return <StreamUpDateItem key={item.id} item={item} />
+                })
+              }
             </div>
           </div>
         </div>
@@ -37,7 +41,7 @@ const Home = () => {
             <div className="graph-bar-full">
               <div className="graph-bar__fig">
                 <div class="graph--bar__fig-bar status--1" style={{width: `${data.listIssues.filter(item => item.status === 'Open').length / data.listIssues.length * 100}%`}}></div>
-                <div class="graph--bar__fig-bar status--2" style={{width: `${data.listIssues.filter(item => item.status === 'In Progress').length / data.listIssues.length * 100}%`}}></div>
+                <div class="graph--bar__fig-bar status--2" style={{width: `${data.listIssues.filter(item => item.status === 'In progress').length / data.listIssues.length * 100}%`}}></div>
                 <div class="graph--bar__fig-bar status--3" style={{width: `${data.listIssues.filter(item => item.status === 'Resolved').length / data.listIssues.length * 100}%`}}></div>
                 <div class="graph--bar__fig-bar status--4" style={{width: `${data.listIssues.filter(item => item.status === 'Closed').length / data.listIssues.length * 100}%`}}></div>
               </div>
